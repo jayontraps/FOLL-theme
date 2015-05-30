@@ -1,0 +1,16 @@
+.wrap { 
+  width: 100%;
+  overflow: hidden;  
+  position: relative;
+}
+
+.innerWrap {
+	width: 92%;
+	max-width: $max-width;
+	margin: 0 auto;	
+	position: relative;
+	@extend .cf;
+	@include breakpoint(medium-screen) {
+		width: 100%;
+	}	
+}

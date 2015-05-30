@@ -1,0 +1,6 @@
+.site-branding {
+	@include breakpoint(tablet-portrait) {
+		float: left;
+		width: 40%;
+	}
+}

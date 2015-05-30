@@ -1,0 +1,102 @@
+/* toggle button */
+.off-canvas-navigation {
+    &.menu-button-mb {
+      @include breakpoint(tablet-portrait) {
+        display: none;
+      }      
+    }
+
+	cursor: pointer;
+	position: absolute;	
+	top: 1rem;
+	right: 0;
+	z-index: 20;
+
+  .menu-title {
+    float: left;
+    width: 70px;
+    h2 {
+      margin: 0;
+      padding: 0;
+      color: $primary_color;
+      line-height: 2rem;
+      font-size: 1.6rem; 
+      margin-top: 1px;
+    }
+  }
+
+	.menu-btn {
+		display: block;
+    position: relative;
+		width: 45px;
+		height: 35px;	
+    float: right;
+		text-decoration: none;
+		text-indent: -999999px;
+	}
+}
+
+
+.menu-global, .mobile-menu-global{
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  left: 10%;
+  border-top: 4px solid $primary_color;
+  width: 80%;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;    
+}
+
+.menu-top {
+  top: 5px;
+}
+.menu-middle {
+  top: 15px;
+}
+.menu-bottom {
+  top: 25px;
+}
+.menu-top-click {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  top: 15px;
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+  -o-transform: rotate(50deg);
+  transform: rotate(50deg);
+  -webkit-transition: 0.25s 0.25s;
+  -moz-transition: 0.25s 0.25s;
+  -o-transition: 0.25s 0.25s;
+  transition: 0.25s 0.25s;
+  border-top: 5px solid $primary_color;
+}
+.menu-middle-click {
+  opacity: 0;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+}
+.menu-bottom-click {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  top: 15px;
+  -webkit-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
+  -o-transform: rotate(-50deg);
+  transform: rotate(-50deg);
+  -webkit-transition: 0.25s 0.25s;
+  -moz-transition: 0.25s 0.25s;
+  -o-transition: 0.25s 0.25s;
+  transition: 0.25s 0.25s;
+  border-top: 5px solid $primary_color;
+}

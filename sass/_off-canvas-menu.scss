@@ -1,0 +1,104 @@
+[role="main"]:before,
+[role="main"]:after {
+	content: " ";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+}
+[role="main"]:after {
+	left: 100%;
+}
+
+
+
+
+[role="main"],
+.js-nav {
+	transition: .2s all ease;
+	width: 100%;
+	display: block;
+	position: relative;	
+}
+
+
+.js {
+
+
+
+	[role="main"] {
+		margin-left: 0;
+		float: left;		
+	}	
+
+	.js-nav {
+		margin-right: -200%;
+		float: left;		
+	}	
+
+	.active-nav {
+
+
+
+		[role="main"]{
+			margin-right: -100%;
+		}
+
+		.js-nav {
+			margin-right: -100%;
+			float: right;
+		}				
+	}
+
+	.active-sidebar {
+
+
+
+		[role="main"] {
+			margin-left: -100%;
+		}		
+
+		.js-nav {
+			margin-left: 0;
+			width: 100%;
+		}
+
+		@include breakpoint(mobile) {
+			[role="main"] {
+				margin-left: -90%;
+			}		
+
+			.js-nav {
+				margin-left: 0;
+				width: 90%;
+			}				
+		}
+
+
+
+		@include breakpoint(tablet-landscape) {
+			[role="main"] {
+				margin-left: -40%;
+			}		
+
+			.js-nav {
+				margin-left: 0;
+				width: 40%;
+			}				
+		}
+
+		@include breakpoint(small-screen) {
+			[role="main"] {
+				margin-left: -30%;
+			}		
+
+			.js-nav {
+				margin-left: 0;
+				width: 30%;
+			}				
+		}		
+			
+	}
+}

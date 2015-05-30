@@ -1,0 +1,23 @@
+#getActiveMQ-watcher {
+  font-family: "break-0";
+}
+@media only screen and (min-width: $tablet) {
+  #getActiveMQ-watcher {
+    font-family: "break-1";
+  }
+}
+@media only screen and (min-width: $tablet_landscape) {
+  #getActiveMQ-watcher {
+    font-family: "break-2";
+  }
+}
+@media only screen and (min-width: $medium-screen) {
+  #getActiveMQ-watcher {
+    font-family: "break-3";
+  }
+}
+@media only screen and (min-width: $large-screen) {
+  #getActiveMQ-watcher {
+    font-family: "break-4";
+  }
+}

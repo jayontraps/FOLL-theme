@@ -1,0 +1,97 @@
+// font-size
+$body_font_size : 1rem;	// 16px
+$body_font_size_sm: 1rem;
+
+// line height
+$body_line_height : 1.6em;
+$heading_line_height: 1.313em;
+
+
+// layout
+$max-width: 75rem; // 1200px 
+$max-width-medium: 60rem; // 960px
+$max-width-small: 50rem; // 800px
+
+// spacing
+$pad: 1.25rem;
+$margin-bottom: 0.5rem;
+
+
+
+// screen sizes
+$mobile: 25rem; // 400px
+$tablet_portrait: 46rem; // 736px
+$tablet: 48.75rem;	//	780px;
+$tab_between: 56.25rem; // 900px
+$tablet_landscape: 64rem; // 1024px
+$netbook: 67.5rem; // 1024px
+$small-screen: 75rem; // 1200
+$medium-screen: 80rem;	//	1280px;
+$large-screen: 90rem;	//	1440px;
+
+
+
+
+
+
+// colors
+
+
+
+$primary_color : #DE0030;
+
+$background_color : #e5e5e5;
+
+$body_color	:#2a2a2a;
+
+$white: #fff;
+
+$off_white: #fbfbfb;
+
+$grey: #999999;
+
+$light_grey: #CCC;
+
+$modal-overlay-color: rgba(0, 0, 0, 0.8);
+
+
+$body_font :
+'Roboto',
+'Helvetica Neue', 
+ Helvetica, 
+ 'Source Sans Pro', 
+ sans-serif;
+
+
+$heading_font : 
+'Roboto',
+'Helvetica Neue',
+Helvetica,
+Arial,
+sans-serif;
+
+
+$body_font_weight: 200;
+
+$heading_font_weight: 300;
+
+
+
+// headings
+$h1-size:           1.8em; // .alpha
+$h2-size:           1.5em; // .beta
+$h3-size:           1.3em; // .gamma
+$h4-size:           1em; // .delta
+$h5-size:           1em; // .epsilon
+$h6-size:           1em; // .zeta
+
+
+// links
+$link_color: $body_color;
+$link_hover_color: $body_color;
+
+
+
+$milli-size:        0.75rem;
+$micro-size:        0.625rem;
+
