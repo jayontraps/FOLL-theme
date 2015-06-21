@@ -18,16 +18,16 @@
 
    	</nav>
 
-	<footer id="colophon" class="footer-container innerWrap clear" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'foll' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'foll' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'foll' ), 'foll', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+   	<?php include "inc/inc-donate-row.php"; ?>
+
+	<footer id="colophon" class="footer-container clear" role="contentinfo">
+		<div class="site-info innerWrap">
+			<?php get_sidebar( 'footer' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
 
-</div><!-- .wrap -->
+<!-- </div> -->	<!-- .wrap -->
 
 </div><!-- #page -->
 

@@ -1,0 +1,153 @@
+/* -----------------------------------------
+   Navigation Styles
+----------------------------------------- */
+.desktop-nav {
+    padding: 0 ; 
+    margin: 0;
+    @extend .group;
+    float: none;
+    font-family: $heading_font;
+
+    @include breakpoint(tablet-portrait) {
+        float: right;
+    }
+
+    > li {
+        position: relative;
+        display: inline-block;
+
+        a {                
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 1rem .3rem;
+            font-size: .9rem;
+            &:hover {
+                color: $primary_color;
+            }
+
+
+            @include breakpoint(medium-screen) {
+                padding: 1rem 0.6rem;
+                font-size: 1rem;
+            }
+        }
+
+        &.with-ul {
+            // padding-right: 10px;
+
+        }
+
+        &.current-menu-item {
+            
+            > a {
+                color: $accent_color_1;
+            }           
+        }            
+
+        &.current-page-parent {
+            > a {
+                color: $accent_color_1;
+            }           
+        }        
+
+        &.active {
+            > a {
+                color: $primary_color;
+            }
+        }
+        &:last-of-type {
+            a {
+                padding-right: 0;
+            }
+        }
+    }
+
+    ul {
+        float: left;
+        position: absolute;
+        width: 200px;
+        padding: .5rem 0;
+        display: none;
+        z-index: 99999;  
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, .15);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        margin: 0;
+        list-style: none;
+        
+        li {
+            float: none;
+            text-align: left;
+
+            a {
+                display: block;
+                width: 100%;
+                padding: 0 1rem;
+                font-size: .9rem;
+                font-family: $body_font;
+                text-transform: capitalize;
+            }
+
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent;
+            border-top: 0;            
+        }
+
+
+        /* Stroke */
+        &:before {
+            top: -8px;
+            left: 21px;
+
+            /* If 1px darken stroke slightly */
+            border-bottom-color: $grey;            
+            border-width: 8px;
+        }
+
+        /* Fill */
+        &:after {
+            top: -7px;
+            left: 22px;
+            border-bottom-color: #fff;
+            border-width: 7px;
+        }        
+
+
+        }
+    }
+
+}
+
+
+.no-touch {
+    .desktop-nav {
+
+        > li {
+            a {                
+                &:hover {
+                    color: $accent_color_1;
+                }   
+            }
+        }     
+
+        ul li:hover > ul {
+            left: 100%;
+        }           
+
+        li:hover > ul {
+            display: block;
+            left: 0;
+        }
+
+
+    }
+}
+
+
+

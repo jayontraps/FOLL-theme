@@ -65,16 +65,21 @@ module.exports = function(grunt) {
         },
         files: {
           // Where to combine and minify JS files, followed by list of which files to include and exclude
-          'build/main.min.js' : ['js/*.js']
+          'build/main.min.js' : ['js/vendor/jquery.bxslider.js', 'js/functions.js', 'js/plugins-init.js', 'js/main.js']
         }
       },
       prod: {
         files: {
           // Where to combine and minify JS files, followed by list of which files to include and exclude
-          'build/main.min.js' : ['js/*.js']
+          'build/main.min.js' : ['js/vendor/jquery.bxslider.js', 'js/functions.js', 'js/plugins-init.js', 'js/main.js']
         }
       }
     },
+
+
+
+
+
 
     // Watch options: what tasks to run when changes to files are saved
     watch: {
@@ -82,7 +87,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       css: {
-        files: ['sass/*.scss'],
+        files: ['sass/**/*.scss'],
         tasks: ['sass:dev', 'autoprefixer']
       },
       js: {

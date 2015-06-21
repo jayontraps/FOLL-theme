@@ -1,0 +1,69 @@
+.panel-wrap {
+	a {
+		display: block;
+		text-decoration: none;
+
+		&:nth-child(odd){
+			.panel {
+				border-color: $accent_color_2;
+				.parent_title {
+					h2 {
+						background-color: $accent_color_2;
+					}
+				}
+			}
+		}
+	}
+
+
+	@include breakpoint(tablet-between) {
+		margin-top: 3rem;
+	}
+}
+
+.panel {
+	border-top: 2px solid $accent_color_1;
+	position: relative;
+	max-width: 400px;
+	padding: 0;
+	margin:0 0 3rem 0;
+	img {
+		display: block;
+	}
+
+	@include breakpoint(tablet-portrait) {
+		max-width: none;
+	}
+	
+
+	.parent_title  {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.panel-content {
+		@include breakpoint(small-screen) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(0,0,0,.5);
+			color: $off_white;
+			padding: .5rem;
+		}
+	}
+
+	&.tablet-layout {
+		overflow: auto;
+		img {
+			display: block;
+			float: left;
+			padding-right: 1rem;
+		}		
+	}
+}
+
+
+
+
+

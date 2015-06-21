@@ -1,5 +1,44 @@
 $(document).ready(function(){
 
+	// https://www.lullabot.com/blog/article/importing-css-breakpoints-javascript
+	// get currently active media query
+	var breakpoint = {};
+	breakpoint.refreshValue = function () {
+	  this.value = window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/'/g, '');
+	};
+	$(window).resize(function () {
+	  breakpoint.refreshValue();
+	}).resize();
+
+	// // example use
+	// if (breakpoint.value === 'tablet') {
+	//   console.log('tablet breakpoint');
+	// } else {
+	//   console.log('Some other breakpoint');
+	// }
+
+
+	var panels = $('.panel');
+
+	var addClassToPanels = function() {	
+		if (breakpoint.value === 'tablet-portrait' || breakpoint.value === 'tablet') {
+			$(panels).addClass('tablet-layout');
+		} else {
+			$(panels).removeClass('tablet-layout');
+		}	
+	}; addClassToPanels();
+	
+	on_resize(function() {
+		addClassToPanels();
+	});
+
+
+
+
+
+
+
+	// off canvas menu
 	var showSidebar = function() {
 		$('body').removeClass("active-nav").toggleClass("active-sidebar");
 		$('.menu-button').removeClass("active-button");					

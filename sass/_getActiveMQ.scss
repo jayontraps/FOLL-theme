@@ -1,23 +1,36 @@
-#getActiveMQ-watcher {
-  font-family: "break-0";
+body:before {
+  content: "smartphone";
+  display: none; /* Prevent from displaying. */
 }
+
+@media only screen and (min-width: $tablet_portrait) {
+  body:before {
+    content: "tablet-portrait";
+  }  
+}
+
 @media only screen and (min-width: $tablet) {
-  #getActiveMQ-watcher {
-    font-family: "break-1";
-  }
+  body:before {
+    content: "tablet";
+  }  
+}
+@media only screen and (min-width: $tab_between) {
+  body:before {
+    content: "tablet-between";
+  }  
 }
 @media only screen and (min-width: $tablet_landscape) {
-  #getActiveMQ-watcher {
-    font-family: "break-2";
+  body:before {
+    content: "tablet-landscape";
   }
 }
 @media only screen and (min-width: $medium-screen) {
-  #getActiveMQ-watcher {
-    font-family: "break-3";
+  body:before {
+    content: "desktop-medium";
   }
 }
 @media only screen and (min-width: $large-screen) {
-  #getActiveMQ-watcher {
-    font-family: "break-4";
+  body:before {
+    content: "desktop-large";
   }
 }

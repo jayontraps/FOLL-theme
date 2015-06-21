@@ -1,0 +1,14 @@
+.donate-row {
+	
+	// background-color: $light_grey;
+	// border-top: 2px solid $mid_grey;
+}
+
+.donate-row-inner {
+	padding: 2rem 0;
+	margin: 0 auto;
+	text-align: center;
+	@include breakpoint(tablet)	{
+		width: 50%;
+	}
+}

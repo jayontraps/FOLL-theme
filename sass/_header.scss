@@ -1,6 +1,102 @@
-.site-branding {
-	@include breakpoint(tablet-portrait) {
-		float: left;
-		width: 40%;
+.header-outer {
+	// background-image: url("../img/test-1.png");
+	// background-size: 100%;
+ //    background-repeat: no-repeat;
+ //    background-position: center -75px;
+}
+
+.site-header {
+	position: relative;
+}
+
+.bittern {
+	display: none;
+	float: left;
+	width: 25px;
+	margin-top: 5px;
+	@include breakpoint(netbook) {
+		width: 28px;
 	}
 }
+.logo {
+	display: block;
+	width: 190px;
+	// padding: 0 0 0 1rem;
+		padding: 0;
+}
+.site-title {
+	text-indent: -9999999px;
+	width: 0;
+	height: 0;
+	float: left;
+	// position: absolute;
+	// bottom: 0;
+	// left: 60px;
+	// font-size: 1.5rem;
+	
+
+	// a {
+	// 	text-decoration: none;
+	// 	color: $primary_color_dark;
+
+	// 	&:hover {
+ //            color: $accent_color_1;
+ //        } 
+	// }
+
+	// @include breakpoint(tablet-portrait) {
+	// 	position: absolute;
+	// }
+	
+	// @include breakpoint(netbook) {
+	// 	font-size: 1.3rem;
+	// }
+
+	// @include breakpoint(medium-screen) {
+	// 	font-size: 1.8rem;
+	// }	
+
+
+}
+
+
+
+.site-branding {
+	width: 100%;
+
+	@include breakpoint(netbook) {
+		float: left;
+		width: 40%;
+		padding:1.3rem 0;
+	}
+
+	@include breakpoint(tablet-between) {
+		float: left;
+		width: 30%;
+	}		
+}
+
+.desktop-nav-wrap {
+    display: none;
+	
+    @include breakpoint(tablet-between) {   
+    	display: block;
+    	float: right;    
+        width: 60%;
+    }
+
+	@include breakpoint(netbook) {
+		float: right;
+		width: 70%;
+	}    
+}
+
+
+/* typographic - header specific */
+.site-header {
+	a:visited {
+		color: $primary_color_dark;
+	}
+}
+
+

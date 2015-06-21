@@ -1,0 +1,31 @@
+.foll-btn {
+	display: inline-block;
+	padding: 3px 10px;
+	text-align: center;
+	border-radius: 4px;
+	transition: all .2s ease-in-out;
+	cursor: pointer;
+	text-decoration: none;
+	color: $off_white;
+	&:hover {
+		text-decoration: none;
+		color: $off_white;
+	}	
+	&:visited {
+		color: $off_white;
+	}
+
+	&.accent-1 {
+		background-color: $accent_color_1;
+		&:hover {
+			background-color: darken($accent_color_1, 10);
+		}
+	}	
+	&.accent-2 {
+		background-color: $accent_color_2;
+		&:hover {
+			background-color: darken($accent_color_2, 10);
+		}
+	}
+}
+

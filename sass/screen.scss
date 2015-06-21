@@ -7,11 +7,24 @@
 @import "grid";
 @import "global";
 @import "layout";
-@import "nav";
-@import "nav-desktop";
-@import "nav-toggle";
-@import "off-canvas-menu";
+// nav
+@import "navigation/top-bar";
+@import "navigation/nav";
+@import "navigation/nav-desktop";
+@import "navigation/nav-toggle";
+@import "navigation/off-canvas-menu";
+@import "navigation/sub-menu-bar";
+// global
 @import "header";
 @import "footer";
-@import "modules";
+@import "foll-button";
+// modules
+@import "modules/_slider-bxslider-default";
+@import "modules/slider-foll";
+@import "modules/main-content";
+@import "modules/title-tags";
+@import "modules/sidebar-panels";
+@import "modules/donate-row";
+
+
 @import "helpers";

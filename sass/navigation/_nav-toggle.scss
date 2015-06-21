@@ -1,15 +1,15 @@
 /* toggle button */
 .off-canvas-navigation {
     &.menu-button-mb {
-      @include breakpoint(tablet-portrait) {
+      @include breakpoint(tablet-between) {
         display: none;
       }      
     }
 
 	cursor: pointer;
-	position: absolute;	
-	top: 1rem;
-	right: 0;
+	position: fixed;	
+	top: 0;
+	right: 0.3rem;
 	z-index: 20;
 
   .menu-title {
