@@ -20,8 +20,9 @@
 <body <?php body_class(); ?>>
 <?php include "inc/inc-svg-defs.php"; ?>
 <div id="page" class="hfeed site wrap">
+	
 
-	<?php include "inc/inc-top-bar.php"; ?>
+	<?php include "inc/inc-top-bar.php";?>
 
 
 	<div id="main" class="site-main" role="main">
@@ -49,7 +50,19 @@
 		</header><!-- #masthead -->
 	</div>
 
-	<?php include "inc/inc-sub-menu-bar.php"; ?>
+	<?php 
+		// if ( is_page_template( 'page-home.php' ) ) {
+		// // Returns true when 'about.php' is being used.
+		// 	echo "is";
+		// } else {
+		// // Returns false when 'about.php' is not being used.
+		// 	echo "not";
+		// }
+
+		if ( !is_page_template( 'page-home.php' ) ) {
+			include "inc/inc-sub-menu-bar.php"; 
+		} 
+	 ?>
 
 
 	

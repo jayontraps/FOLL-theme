@@ -1,7 +1,14 @@
 .donate-row {
-	
-	// background-color: $light_grey;
+		
+	background-color: #fff;
 	// border-top: 2px solid $mid_grey;
+	h2 {
+		color: $accent_color_2;
+	}
+
+	.foll-btn {
+		padding: .75rem 2rem;
+	}
 }
 
 .donate-row-inner {
@@ -11,4 +18,9 @@
 	@include breakpoint(tablet)	{
 		width: 50%;
 	}
+}
+
+.bittern-sm {
+	display: inline-block;
+	max-width: 180px;
 }

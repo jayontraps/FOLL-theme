@@ -24,10 +24,8 @@ body {
   }
 
 .foll-content {
-
-		background-color: $background_color;
-		// background-color: rgba(227,232,235,.6);
-
+	background-color: $background_color;
+	// background-color: rgba(227,232,235,.6);
 }
 
 
@@ -59,3 +57,18 @@ body {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
 }
+
+
+
+
+.foll-hr {
+	height: 0;
+	padding:0;
+	margin: 0 0 1rem 0;
+	border: 2px solid $accent_color_1;
+	width: 150px;
+}
+
+
+
+

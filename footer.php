@@ -17,8 +17,12 @@
 		'menu_class'      => 'navmenu' ) ); ?>	
 
    	</nav>
-
-   	<?php include "inc/inc-donate-row.php"; ?>
+	
+   	<?php
+			if (is_page_template("page-home.php" )) {
+				include "inc/inc-donate-row.php";
+			}
+   	  ?>
 
 	<footer id="colophon" class="footer-container clear" role="contentinfo">
 		<div class="site-info innerWrap">

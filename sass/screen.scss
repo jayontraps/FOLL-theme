@@ -7,6 +7,7 @@
 @import "grid";
 @import "global";
 @import "layout";
+@import "svg";
 // nav
 @import "navigation/top-bar";
 @import "navigation/nav";
@@ -25,6 +26,7 @@
 @import "modules/title-tags";
 @import "modules/sidebar-panels";
 @import "modules/donate-row";
-
+// pages
+@import "page-specific/home-page";
 
 @import "helpers";
