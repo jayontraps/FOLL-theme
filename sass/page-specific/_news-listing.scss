@@ -1,0 +1,19 @@
+.posted-date {
+	color: $dark_grey;
+}
+.article-title {
+	margin-top: 2rem;
+	a {
+		text-decoration: none;
+		color: $accent_color_1;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.news-item {
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px dashed $accent_color_1;
+}

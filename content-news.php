@@ -1,22 +1,19 @@
+
+
 <?php
 /**
- * The template used for displaying page content in page.php
- *
  * @package foll
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-	<?php if ($post->post_parent > 0 ): ?>
-	
-		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header>
-
-	<?php endif; ?>
-
-	
+		<div class="entry-meta">
+			<?php just_posted_date(); ?>
+		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -29,6 +26,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php // edit_post_link( __( 'Edit', 'foll' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php // foll_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -1,0 +1,36 @@
+// Sites of interest page
+
+
+.single-sites {
+	.parent_title {
+		margin-bottom: 3rem;		
+	}
+
+}
+
+
+.site-main-img {
+	border: 1px solid $accent_color_1;
+}
+
+
+.image-panel {
+	margin-bottom: 1.25rem;
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		margin:0;
+		padding:0;
+	}
+	p {
+		margin: 0;
+		padding: 1em;
+		background-color: $very_dark_grey;
+		font-size: $small_font_size;
+		color: white;
+	}
+}
+
+.sites-aside {
+	margin: 3rem 0 0 0 ;	
+}

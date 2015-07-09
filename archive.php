@@ -9,41 +9,56 @@
 
 get_header(); ?>
 
-<div class="wrap">
+<div class="wrap foll-content">
 	
-	<div id="main" class="site-main" role="main">
-
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+		<div class="innerWrap">
+			<div class="col-2-3">				
+				<div class="main-content">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+					<header class="page-header">
+						<?php
+							the_archive_title( '<h1 class="page-title">', '</h1>' );
+							the_archive_description( '<div class="taxonomy-description">', '</div>' );
+						?>
+					</header><!-- .page-header -->
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+					<?php
+						/* Include the Post-Format-specific template for the content.
+						 * If you want to override this in a child theme, then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'content', get_post_format() );
+					?>
 
-			<?php the_posts_navigation(); ?>
+				<?php endwhile; ?>
 
-		<?php else : ?>
+				<?php // the_posts_navigation(); ?>
+				<?php foll_paging_nav(); ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+				<?php else : ?>
 
-		<?php endif; ?>
+				<?php get_template_part( 'content', 'none' ); ?>
 
-		
+				<?php endif; ?>
+
+
+
+				</div>
+
+			</div>
+
+			<div class="col-1-3">
+				<?php include "inc/inc-sidebar.php"; ?>
+			</div>
+			
+		</div><!-- .innerWrap -->
+
+	</div><!-- .wrap -->		
 	
 
 <?php // get_sidebar(); ?>

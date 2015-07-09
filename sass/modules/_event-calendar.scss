@@ -1,0 +1,131 @@
+.e-entry {
+	overflow: auto;
+	clear:left;
+	margin: 0;
+
+	&.bird-walk {
+		.e-weekday {
+			background-color: $accent_color_1;
+		}
+		.e-title {
+			color: $accent_color_1;
+			border-bottom: 2px solid $accent_color_1;
+		}
+
+		.loc {
+			color: $accent_color_1;
+		}
+		.icon-e-category {
+			fill: $accent_color_1;
+			&:hover {
+				fill: darken($accent_color_1, 30);
+			}
+		}
+
+	}
+	&.work-party {
+		.e-weekday {
+			background-color: $accent_color_2;
+		}
+		.e-title {
+			color: $accent_color_2;
+			border-bottom: 2px solid $accent_color_2;
+		}
+		.loc {
+			color: $accent_color_2;
+		}
+		.icon-e-category {
+			fill: $accent_color_2;
+			&:hover {
+				fill: darken($accent_color_2, 30);
+			}
+		}
+		
+	}
+}
+
+
+
+
+
+.e-date {
+	width: 50px;
+	float: left;
+	border: 1px solid $grey;
+}
+.e-weekday {
+	display: block;
+	text-align: center;
+	padding: .3rem;
+	font-size: 1rem;
+	color: $off_white;
+}
+.e-day {
+	display: block;
+	text-align: center;
+	padding: .3rem;
+	font-size: 1.5em;
+}
+
+.e-entry-header {
+	position: relative;
+	padding: 0 0 0 0;
+	@include breakpoint(tablet-portrait) {
+		padding: 0 50px 0 0;
+	}
+}
+
+.month-head {
+	h2 {
+		margin: 1em 0;
+	}
+}
+
+.e-content-inner {
+	@include breakpoint(tablet-portrait) {
+		padding-right: 50px;
+	}
+}
+
+
+.e-category {
+	display : none;
+	@include breakpoint(tablet-portrait) {
+		display: block;
+	}
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 0;
+	right: 0;
+}
+
+.e-content {
+	margin-left: 70px;
+}
+
+
+.e-title {
+	display: block;
+	margin: 0 1rem 1rem 0;	
+	padding-bottom: .5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

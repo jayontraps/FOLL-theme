@@ -11,7 +11,7 @@
 	max-width: 400px;
 	border-top: 4px solid $accent_color_1;	
 
-	@include breakpoint(tablet) {		
+	@include breakpoint(tablet-portrait) {		
 		@include defineCols(2, 7%);		
 	}
 	@include breakpoint(tablet-landscape) {		

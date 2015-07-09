@@ -12,3 +12,14 @@
 	height:64px;
 	fill: $off_white;
 }
+
+.icon-e-category {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	fill: red;
+
+	&.icon-bins {
+		padding: 8px;
+	}
+}

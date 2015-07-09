@@ -36,20 +36,21 @@
 	}
 	
 
-	.parent_title  {
+	.parent_title  {		
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
 
 	.panel-content {
+		background-color: rgba(0,0,0,.5);
+		color: $off_white;
+		padding: .5rem;
+
 		@include breakpoint(small-screen) {
 			position: absolute;
 			bottom: 0;
-			left: 0;
-			background-color: rgba(0,0,0,.5);
-			color: $off_white;
-			padding: .5rem;
+			left: 0;									
 		}
 	}
 
@@ -60,6 +61,12 @@
 			float: left;
 			padding-right: 1rem;
 		}		
+	}	
+}
+
+.sites {
+	.panel-content {
+		position: relative;
 	}
 }
 

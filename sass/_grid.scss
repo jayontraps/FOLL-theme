@@ -37,6 +37,9 @@
     }    
 }
 
+
+
+
 .col-1-3 {
     width: 100%;
     float:none;
@@ -45,8 +48,6 @@
         width:33.33%;
     }    
 }
-
-
 .col-2-3 {
     width: 100%;
     float:none;
@@ -55,6 +56,32 @@
         width:66.66%;
     }    
 }
+
+
+
+
+.col-1-4 {
+    width: 100%;
+    float:none;
+    @include breakpoint(tablet-between) {
+        float: left;
+        width:25%;
+    }    
+}
+.col-3-4 {
+    width: 100%;
+    float:none;
+    @include breakpoint(tablet-between) {
+        float: left;
+        width:75%;
+    }    
+}
+
+
+
+
+
+
 
 
 

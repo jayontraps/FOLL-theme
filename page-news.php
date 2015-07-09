@@ -1,18 +1,15 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template name: news page
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package foll
  */
+
 
 get_header(); ?>
 
 	<div class="wrap foll-content">
+
+	<!-- <div id="main" class="site-main" role="main"> -->
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -27,10 +24,10 @@ get_header(); ?>
 				<div class="parent_title">			
 					<h2><?php echo $parent_title; ?></h2>
 				</div>
-				
-					
-
+									
 				<?php get_template_part( 'content', 'page' ); ?>
+
+				<?php include "inc/inc-news-list.php"; ?>
 
 				</div>
 

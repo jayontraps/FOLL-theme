@@ -1,0 +1,40 @@
+.sites-nav {
+	font-size: $small_font_size;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		border-left: 2px solid $grey;
+
+		&.current_page_item {
+			border-color: $accent_color_1;
+			a {
+				color: $accent_color_1;
+			}
+		}
+
+		&:hover {
+			border-color: $accent_color_1;
+			a {
+				color: $accent_color_1;
+			}
+		}
+
+	}
+
+	a {
+		text-decoration: none;
+		display: block;
+		margin: 0 3rem 0 2rem;
+		padding: .3rem 0;
+		border-bottom: 1px solid $grey;
+		border-top: 1px solid $off_white;
+	}
+
+	li:first-of-type {
+		a {
+			border-top: none;
+		}
+	}
+}
