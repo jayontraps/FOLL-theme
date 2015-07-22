@@ -1843,6 +1843,554 @@ a:hover.page-numbers {
   margin-bottom: 1rem;
   border-bottom: 1px dashed #33691e; }
 
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-clearfix {
+  clear: both; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-input {
+  display: inline-block;
+  width: 250px; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-input select {
+  display: none; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-placeholder {
+  color: #999; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-backdrop {
+  background: 0 0;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-dropdown {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15), 0 10px 16px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 9999; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-search-input-container {
+  border-bottom: 1px solid #eee; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-search-input {
+  background: 0 0;
+  border: 0;
+  outline: 0;
+  width: 100%; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-results-container {
+  max-height: 28em;
+  overflow: auto;
+  position: relative; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-load-more, .selectivity-result-item {
+  cursor: pointer;
+  padding: 7px; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-result-children .selectivity-result-item {
+  padding-left: 17px; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-load-more.highlight, .selectivity-result-item.highlight {
+  background: #4484c7;
+  color: #fff; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-result-item:first-child {
+  border-radius: 4px 4px 0 0; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-dropdown.has-search-input .selectivity-result-item:first-child {
+  border-radius: 0; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-result-label {
+  font-weight: 700; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-load-more, .selectivity-result-item:last-child, .selectivity-result-children:last-child .selectivity-result-item:last-child {
+  border-radius: 0 0 4px 4px; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-result-children .selectivity-result-item:last-child {
+  border-radius: 0; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-error, .selectivity-loading, .selectivity-search-input-container, .selectivity-result-label {
+  padding: 7px; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-multiple-input-container {
+  background: #eee;
+  border-radius: 2px;
+  cursor: text;
+  max-height: 10em;
+  min-height: calc(2em + 4px);
+  overflow: auto;
+  padding: 5px; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-multiple-input-container .selectivity-placeholder {
+  height: calc(2em + 4px);
+  line-height: calc(2em + 4px); }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-multiple-input, input[type='text'].selectivity-multiple-input {
+  background-color: transparent;
+  border: none;
+  float: left;
+  height: calc(2em + 4px);
+  max-width: 100%;
+  outline: 0;
+  padding: 0; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-multiple-input:focus, input[type='text'].selectivity-multiple-input:focus {
+  background-color: transparent;
+  box-shadow: none;
+  outline: none; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-multiple-input::-ms-clear {
+  display: none; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-multiple-input.selectivity-width-detector {
+  position: absolute;
+  top: -10000px;
+  left: 0;
+  white-space: pre; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-multiple-selected-item {
+  background: #4484c7;
+  border-radius: 3px;
+  color: #fff;
+  cursor: default;
+  float: left;
+  line-height: 2em;
+  margin: 2px;
+  padding-right: 5px;
+  position: relative;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  white-space: nowrap; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-multiple-selected-item.highlighted {
+  background-color: #ccc; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-multiple-selected-item-remove {
+  color: #fff;
+  cursor: pointer;
+  padding: 5px; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-single-select {
+  background: #eee;
+  border-radius: 2px;
+  cursor: pointer;
+  min-height: 2em;
+  padding: 5px;
+  position: relative;
+  box-sizing: content-box; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-single-select-input {
+  opacity: 0; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-single-result-container {
+  position: absolute;
+  top: .8em;
+  right: 15px;
+  left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-single-selected-item {
+  color: #000; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-single-selected-item-remove {
+  color: #000;
+  float: right;
+  padding: 0 5px; }
+
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-caret {
+  position: absolute;
+  right: 5px;
+  top: .7em; }
+
+@media only screen and (max-device-width: 480px) {
+  /* line 1, ../sass/app/_selectivity.scss */
+  .selectivity-single-select {
+    background: #eee;
+    border-radius: 2px; }
+
+  /* line 1, ../sass/app/_selectivity.scss */
+  .selectivity-single-result-container {
+    right: 5px; }
+
+  /* line 1, ../sass/app/_selectivity.scss */
+  .selectivity-caret {
+    display: none; } }
+/* line 1, ../sass/app/_selectivity.scss */
+.selectivity-submenu-icon {
+  position: absolute;
+  right: 4px; }
+
+/* line 3, ../sass/app/_selectivity.scss */
+.selectivity-caret {
+  position: absolute;
+  right: 5px;
+  top: .7em;
+  width: 12px;
+  height: 16px;
+  background-image: url(../img/sprite.svg);
+  background-position: -32px -32px; }
+
+/* line 13, ../sass/app/_selectivity.scss */
+.selectivity-single-select {
+  background: #FFF; }
+
+/* line 17, ../sass/app/_selectivity.scss */
+.selectivity-single-selected-item-remove {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(../img/sprite.svg);
+  background-position: -32px -64px; }
+
+/* line 1, ../sass/app/_simpleTabs.scss */
+ul.tabs {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: none;
+  height: 32px;
+  border-bottom: 1px solid #d4d4d4;
+  border-left: 1px solid #d4d4d4;
+  width: 100%; }
+
+/* line 11, ../sass/app/_simpleTabs.scss */
+ul.tabs li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  height: 32px;
+  line-height: 31px;
+  border: 1px solid #d4d4d4;
+  border-left: none;
+  margin-bottom: -1px;
+  /*	background: #d4d4d4;*/
+  overflow: hidden;
+  position: relative; }
+
+/* line 25, ../sass/app/_simpleTabs.scss */
+ul.tabs li a {
+  text-decoration: none;
+  display: block;
+  padding: 0 20px;
+  outline: none;
+  color: #999;
+  background-color: #fafafa; }
+
+/* line 33, ../sass/app/_simpleTabs.scss */
+ul.tabs li.active a {
+  color: #333333;
+  background-color: white; }
+
+/* line 39, ../sass/app/_simpleTabs.scss */
+ul.tabs li a:hover {
+  background: #d4d4d4; }
+
+/* line 42, ../sass/app/_simpleTabs.scss */
+html ul.tabs li.active, html ul.tabs li.active a:hover {
+  background: #fff;
+  border-bottom: 1px solid #fff; }
+
+/* line 48, ../sass/app/_simpleTabs.scss */
+.tab_container {
+  border: 1px solid #d4d4d4;
+  background-color: white;
+  border-top: none;
+  clear: both;
+  float: left;
+  width: 100%; }
+
+/* line 56, ../sass/app/_simpleTabs.scss */
+.tab_content {
+  padding: 20px; }
+
+/* line 60, ../sass/app/_simpleTabs.scss */
+.tab_content h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ddd; }
+
+/* line 64, ../sass/app/_simpleTabs.scss */
+.tab_content h3 a {
+  color: #254588; }
+
+/* line 67, ../sass/app/_simpleTabs.scss */
+.tab_content img {
+  float: left;
+  margin: 0 20px 20px 0;
+  border: 1px solid #ddd;
+  padding: 5px; }
+
+/* line 1, ../sass/app/_app.scss */
+.container {
+  margin: 0;
+  padding: 0; }
+
+/* line 6, ../sass/app/_app.scss */
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #FFF;
+  background: url(../img/spiffygif_64x64.gif) center center no-repeat rgba(255, 255, 255, 0.75);
+  z-index: 999; }
+  /* line 18, ../sass/app/_app.scss */
+  #overlay h4 {
+    padding-top: 3rem;
+    margin: 0 auto; }
+
+/* line 25, ../sass/app/_app.scss */
+#table-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #FFF;
+  background-color: rgba(255, 255, 255, 0.75);
+  /*	background: url(../img/spiffygif_64x64.gif) center 350px no-repeat rgba(255,255,255, 0.75);
+  */
+  z-index: 999;
+  display: none; }
+
+/* line 41, ../sass/app/_app.scss */
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../img/spiffygif_64x64.gif) center center no-repeat rgba(255, 255, 255, 0.75);
+  z-index: 9999;
+  display: none; }
+
+/* line 52, ../sass/app/_app.scss */
+#table-overlay.loading {
+  display: block; }
+
+/* line 56, ../sass/app/_app.scss */
+#table-overlay.loading .spinner {
+  display: block; }
+
+/* line 60, ../sass/app/_app.scss */
+#results {
+  position: relative; }
+
+/* line 65, ../sass/app/_app.scss */
+#mynano {
+  z-index: 9999; }
+
+/* line 80, ../sass/app/_app.scss */
+.s-wrap {
+  padding-bottom: 2em; }
+
+/* line 84, ../sass/app/_app.scss */
+.col-1-2 {
+  width: 50%;
+  float: left; }
+
+/* line 89, ../sass/app/_app.scss */
+.col-1 {
+  width: 100%;
+  clear: left; }
+
+/* line 94, ../sass/app/_app.scss */
+.col-1-3 {
+  width: 33.33%;
+  float: left; }
+
+/* line 99, ../sass/app/_app.scss */
+.col-2-3 {
+  width: 66.66%;
+  float: left; }
+
+/* line 104, ../sass/app/_app.scss */
+.speciesSearch {
+  margin: 1em 0; }
+
+/* line 108, ../sass/app/_app.scss */
+table {
+  width: 100%; }
+
+/* line 112, ../sass/app/_app.scss */
+th, td {
+  padding: .5em;
+  width: 16%;
+  border: 1px solid #d4d4d4; }
+
+/* line 118, ../sass/app/_app.scss */
+th {
+  font-weight: bold;
+  position: relative; }
+
+/* line 123, ../sass/app/_app.scss */
+th:hover {
+  cursor: pointer; }
+
+/* line 127, ../sass/app/_app.scss */
+th:first-of-type:hover {
+  cursor: default; }
+
+/* line 131, ../sass/app/_app.scss */
+th, td {
+  width: 10%; }
+
+/* line 135, ../sass/app/_app.scss */
+.notes {
+  width: 20%; }
+
+/* line 139, ../sass/app/_app.scss */
+.sort-icon {
+  display: none;
+  background-repeat: no-repeat;
+  background-image: url(../img/sprite.svg); }
+
+/* line 145, ../sass/app/_app.scss */
+.sort-icon.active {
+  display: block; }
+
+/* line 149, ../sass/app/_app.scss */
+th[data-order="asc"] .sort-icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  width: 12px;
+  height: 16px;
+  background-position: 0 -32px; }
+
+/* line 157, ../sass/app/_app.scss */
+th[data-order="desc"] .sort-icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  width: 12px;
+  height: 16px;
+  background-position: -32px -32px; }
+
+/* line 166, ../sass/app/_app.scss */
+th.sort {
+  text-decoration: underline; }
+
+/* line 169, ../sass/app/_app.scss */
+th.no-sort:hover {
+  cursor: auto; }
+
+/* line 175, ../sass/app/_app.scss */
+tr:nth-child(2n) {
+  background-color: #F7F7F7; }
+
+/* line 179, ../sass/app/_app.scss */
+input {
+  margin-right: 1em;
+  padding: 8px 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 0;
+  background: #F2F2F2;
+  letter-spacing: 0.02em; }
+
+/* line 188, ../sass/app/_app.scss */
+.selectivity-single-select {
+  border: 1px solid #d4d4d4;
+  border-radius: 0; }
+
+/* line 192, ../sass/app/_app.scss */
+.selectivity-input {
+  width: 250px; }
+
+/* line 210, ../sass/app/_app.scss */
+.date_set {
+  margin-bottom: .7em; }
+
+/* line 214, ../sass/app/_app.scss */
+.date_set label {
+  display: inline-block;
+  width: 80px; }
+
+/* line 220, ../sass/app/_app.scss */
+select {
+  padding: 4px;
+  background: #ffffff;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  margin: 0 3px; }
+
+/* line 228, ../sass/app/_app.scss */
+select.invalid {
+  color: #E9403C; }
+
+/* line 232, ../sass/app/_app.scss */
+button {
+  display: block;
+  padding: 8px 10px; }
+
+/* line 237, ../sass/app/_app.scss */
+.btn {
+  text-decoration: none;
+  color: #333333;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  background: #F2F2F2;
+  letter-spacing: 0.02em; }
+
+/* line 247, ../sass/app/_app.scss */
+.btn:hover {
+  cursor: pointer; }
+
+/* line 252, ../sass/app/_app.scss */
+.graph-wrapper {
+  /*	margin-top: 3em;*/ }
+
+/* line 256, ../sass/app/_app.scss */
+.graph-wrapper > div {
+  margin-bottom: 1em;
+  padding-top: 1em; }
+
 /* line 1, ../sass/_helpers.scss */
 .group:after, .desktop-nav:after {
   visibility: hidden;

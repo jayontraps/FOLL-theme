@@ -104,7 +104,7 @@ function foll_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer text', 'troon' ),
+		'name'          => __( 'Footer text', 'foll' ),
 		'id'            => 'sidebar-2',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',

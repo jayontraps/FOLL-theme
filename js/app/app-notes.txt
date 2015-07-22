@@ -1,0 +1,26 @@
+
+// NEED TO UPDATE THIS MAP TO DISPLAY CASCADE OF FUNCTIONS 
+
+setUp > (1 full loop)
+	
+generateQuery > (1 full loop)
+	
+	addFormattedDate > (1 results loop)
+		dateRange	(1 results loop - push to filteredArray)
+		(sortByDate) >
+			maxNumResults 
+				displayResults >
+					displayResults
+
+
+validateGraphSearch > (1 full loop) 
+
+arrivalAndDeparture > (1 full loop)
+
+
+
+
+
+
+All the complete dataset loops - 	var len = results.data.length - 1;
+This is due to an error in papaparse results on the last line of .csv - solution to remove that line from the loop (array length -1)

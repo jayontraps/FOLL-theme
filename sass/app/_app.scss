@@ -12,9 +12,14 @@
 	height: 100vh;
 	width: 100vw;
 	background-color: #FFF;
+	background: url(../img/spiffygif_64x64.gif) center center no-repeat rgba(255,255,255, 0.75);
 	z-index: 999;
-}
 
+	h4 {
+		padding-top: 3rem;
+		margin: 0 auto;
+	}
+}
 
 
 #table-overlay {
@@ -27,7 +32,7 @@
 	width: 100%;
 	background-color: #FFF;
 	background-color: rgba(255,255,255, 0.75);
-/*	background: url(../images/spiffygif_64x64.gif) center 350px no-repeat rgba(255,255,255, 0.75);
+/*	background: url(../img/spiffygif_64x64.gif) center 350px no-repeat rgba(255,255,255, 0.75);
 */	z-index: 999;
 	display: none;
 }
@@ -39,7 +44,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;	
-	background: url(../images/spiffygif_64x64.gif) center center no-repeat rgba(255,255,255, 0.75);
+	background: url(../img/spiffygif_64x64.gif) center center no-repeat rgba(255,255,255, 0.75);
 	z-index: 9999;
 	display: none;
 }
@@ -134,7 +139,7 @@ th, td {
 .sort-icon {
 	display: none;
 	background-repeat: no-repeat;
-	background-image: url(../images/sprite.svg);
+	background-image: url(../img/sprite.svg);
 }
 
 .sort-icon.active {
@@ -147,7 +152,7 @@ th[data-order="asc"] .sort-icon {
 	top: 8px;
 	width: 12px;
 	height: 16px;
-	background-position: -32px 0;
+	background-position: $triangle-up;
 }
 th[data-order="desc"] .sort-icon {
 	position: absolute;
@@ -155,7 +160,14 @@ th[data-order="desc"] .sort-icon {
 	top: 8px;
 	width: 12px;
 	height: 16px;	
-	background-position: 0 0;
+	background-position: $triangle_down;
+}
+
+th.sort {
+	text-decoration: underline;
+}
+th.no-sort:hover {
+	cursor: auto;
 }
 
 
