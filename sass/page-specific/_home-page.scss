@@ -7,9 +7,10 @@
 }
 
 .h-panel {
+	position: relative;
 	float: left;
 	max-width: 400px;
-	border-top: 4px solid $accent_color_1;	
+	border-top: 4px solid $light_shade_primary;	
 
 	@include breakpoint(tablet-portrait) {		
 		@include defineCols(2, 7%);		
@@ -21,26 +22,78 @@
 	h2 {
 		text-transform: capitalize;
 		margin: 1em 0;
+
+		a {
+			text-decoration: none;
+			color: $primary_color;	
+			transition: all .2s ease;
+			// &:hover {
+			// 	text-decoration: underline;
+			// }
+		}
 	}
 
+
+		
+
+
 	&:nth-child(1) {
-		h2 {
-			color: $accent_color_1; 
+
+		&:hover {
+			h2 a {
+				color: $accent_color_1; 
+			}				
 		}
-		border-color: $accent_color_1;
+
+		&:hover:before {
+			background: $accent_color_1;
+		}
 	}
+
 	&:nth-child(2) {
-		h2 {
-			color: $accent_color_3; 
+
+		&:hover {
+			h2 a {
+				color: $accent_color_3; 
+			}					
 		}
-		border-color: $accent_color_3;
+			
+		&:hover:before {
+			background: $accent_color_3;
+		}
 	}
+
 	&:nth-child(3) {
-		h2 {
-			color: $accent_color_2; 
+
+		&:hover {
+			h2 a {
+				color: $accent_color_2; 
+			}					
 		}
-		border-color: $accent_color_2;
+			
+		&:hover:before {
+			background: $accent_color_2;
+		}
 	}
+
+
+
+	// border color animation
+	&:before {
+		content: '';
+		display: block;
+		margin: auto;
+		margin-top: -4px;
+		height: 4px;
+		width: 0px;
+		background: transparent;
+		transition: width .5s ease, background-color .5s ease;
+	}
+
+	&:hover:before {
+		width: 100%;
+		// background: blue;
+	}	
 
 }
 

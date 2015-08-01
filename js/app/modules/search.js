@@ -90,7 +90,7 @@ var emptyList = function() {
 
 var escapeDateFun = function() {
 	alert('Invalid date range.');
-	table_overlay.removeClass('loading');
+	overlay.removeClass('loading');
 	return false;
 };
 
@@ -208,6 +208,7 @@ var reverseDateString = function(dateString) {
 var buildDomEls = function(totalResults, resultsArr) {
 	var newRows = $('<span/>');
 	var convertedLocName = "";
+
 	for (var i = 0; i < totalResults; i++) {
 		convertedLocName = locationInitialsToName(resultsArr[i].location);
 		$('<tr/>', {
@@ -274,7 +275,6 @@ var displayResults = function(resultsArr, theSearch) {
 		}
 	}
 
-
 	theSearch.loc = locationInitialsToName(theSearch.loc);
 
 	var readBackResults = "<b>" + theSearch.numOfResults + " records for " + theSearch.species + " at " + theSearch.loc + ", " +summarizeDateRange + " " + chosenMonth + " " + hasMaxNumber + "</b>";
@@ -283,7 +283,7 @@ var displayResults = function(resultsArr, theSearch) {
 
 	buildDomEls(totalResults, resultsArr);
 
-	setTimeout(function(){ table_overlay.removeClass('loading'); }, 300);
+	setTimeout(function(){ overlay.removeClass('loading'); }, 500);
 };
 
 

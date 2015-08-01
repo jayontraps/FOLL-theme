@@ -2,8 +2,8 @@
 	<div class="innerWrap">
 
 		<ul class="top-bar-nav">
-		    <li><a class="tb-links" href="#">Contact us</a></li>
-		    <li><a class="tb-links" href="#">Members</a></li>
+		    <li><a class="tb-links" href="<?php bloginfo('url'); ?>/contact-us">Contact us</a></li>
+		    <li><a class="tb-links" href="<?php bloginfo('url'); ?>/members-login">Members</a></li>
 		  </ul>
 
 

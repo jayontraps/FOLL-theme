@@ -1,0 +1,19 @@
+.rcp_form {
+	input[type="text"], input[type="email"], textarea {
+		min-width: 300px;
+	}
+	input {
+		background-color: #fff;
+	}
+	legend {
+		padding-top: 2rem;
+	}
+}
+
+// Registration 
+.interests {
+	margin-bottom: 1rem;
+	div {
+		margin-left: 1rem;
+	}
+}

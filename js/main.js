@@ -89,4 +89,36 @@ $(document).ready(function(){
     }  
 
 
+    // Members Area of intersts form fields
+    // when checked - add values to hidden input
+    var isChecked = function() {
+    	var $this = $(this),
+    		$val = $this.val() +', ';
+    		rcp_interests = $('#rcp_interests');
+
+		$(rcp_interests).val(function(_, val) {
+		    if (val.match($val)) {
+		        return val.replace($val, '');
+		    }
+		    return val + $val;
+		});
+    };
+    $('.interest-options').on( "click", isChecked );
+
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

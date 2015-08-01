@@ -8,14 +8,14 @@
 get_header(); ?>
 
 <div class="wrap foll-content">
+
+	<div class="innerWrap">
+		<div class="col-2-3">				
+			<div class="main-content">	
 	
-		<?php if ( have_posts() ) : ?>
+				<?php if ( have_posts() ) : ?>
 
-		<div class="innerWrap">
-			<div class="col-2-3">				
-				<div class="main-content">		
-
-
+	
 					<header class="page-header">
 						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'foll' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 					</header><!-- .page-header -->

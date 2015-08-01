@@ -29,6 +29,7 @@
 @import "modules/sidebar-panels";
 @import "modules/donate-row";
 @import "modules/event-calendar";
+@import "modules/events-single";
 
 // pages and post types
 @import "page-specific/home-page";
@@ -39,5 +40,8 @@
 @import "app/selectivity";
 @import "app/simpleTabs";
 @import "app/app";
+
+// forms
+@import "rcp-forms.scss";
 
 @import "helpers";

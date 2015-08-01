@@ -7,7 +7,7 @@
 		.e-weekday {
 			background-color: $accent_color_1;
 		}
-		.e-title {
+		.e-title a {
 			color: $accent_color_1;
 			border-bottom: 2px solid $accent_color_1;
 		}
@@ -27,7 +27,7 @@
 		.e-weekday {
 			background-color: $accent_color_2;
 		}
-		.e-title {
+		.e-title a {
 			color: $accent_color_2;
 			border-bottom: 2px solid $accent_color_2;
 		}
@@ -105,10 +105,14 @@
 }
 
 
-.e-title {
+.e-title a {
 	display: block;
+	text-decoration: none;
 	margin: 0 1rem 1rem 0;	
 	padding-bottom: .5em;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 

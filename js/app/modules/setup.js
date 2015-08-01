@@ -23,8 +23,6 @@ $.ajax({
     }
 });	
 
-
-
 var nano_options = {
     target: document.getElementById('overlay'),
     id: 'mynano'
@@ -32,8 +30,7 @@ var nano_options = {
 var nanobar = new Nanobar(nano_options);
 nanobar.go( 50 ); // size bar 30%
 
-
-var table_overlay = $('#table-overlay');
+var overlay = $('.overlay');
 var search = "";
 var locList = $('#locationSearch');
 var resultsList = $('#results');	
@@ -44,15 +41,13 @@ var speciesH4 = $('#sp-name');
 
 var setUp = function(results) {
 				
-	buildFormEls(results);	
-	$('#overlay').hide();		
-
+	buildFormEls(results);			
 	validateGraphSearch(results);
 	arriveDepart(results);
 
 	var addLoadingClass = function(){
 	  var d = $.Deferred();
-	    table_overlay.addClass('loading');
+	    overlay.addClass('loading');
 	    d.resolve();
 	  	return d.promise();
 	};
@@ -146,6 +141,7 @@ var buildFormEls = function(results){
 	});	
 
 	nanobar.go(100); // Finish progress bar
+	overlay.removeClass('loading');
 };
 
 var locationInitialsToName = function(locationInitials) {
@@ -178,6 +174,9 @@ var locationInitialsToName = function(locationInitials) {
 
 	} else if(locationInitials === "WS") {
 		locationInitials = "White Swan Lake";
+		return locationInitials;
+	} else if(locationInitials === "all locations") {
+		locationInitials = "all locations";
 		return locationInitials;
 	}
 };

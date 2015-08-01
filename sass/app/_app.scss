@@ -2,7 +2,7 @@
 	margin: 0;
 	padding:0;
 }
-
+// page over-lay
 #overlay {
 	position: absolute;
 	top: 0;
@@ -12,18 +12,14 @@
 	height: 100vh;
 	width: 100vw;
 	background-color: #FFF;
-	background: url(../img/spiffygif_64x64.gif) center center no-repeat rgba(255,255,255, 0.75);
+	background: url(../img/loading.svg) center center no-repeat rgba(255,255,255, 0.75);
 	z-index: 999;
 
-	h4 {
-		padding-top: 3rem;
-		margin: 0 auto;
-	}
 }
 
-
+// table over-lay
 #table-overlay {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -31,22 +27,28 @@
 	height: 100%;
 	width: 100%;
 	background-color: #FFF;
-	background-color: rgba(255,255,255, 0.75);
-/*	background: url(../img/spiffygif_64x64.gif) center 350px no-repeat rgba(255,255,255, 0.75);
+	// background-color: rgba(255,255,255, 0.75);
+/*	background: url(../img/loading.svg) center 350px no-repeat rgba(255,255,255, 0.75);
 */	z-index: 999;
-	display: none;
+	// display: none;
 }
 
 
 .spinner {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;	
-	background: url(../img/spiffygif_64x64.gif) center center no-repeat rgba(255,255,255, 0.75);
-	z-index: 9999;
-	display: none;
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	// right: 0;
+	// bottom: 0;	
+	// background: url(../img/loading.svg) center center no-repeat rgba(255,255,255, 0.75);
+	// z-index: 9999;
+	// display: none;
+	// position: absolute;
+	// top: 50%;
+	// left: 50%;
+	// transform: translate(-50%, -50%);	
+	// width: 100px;
+	// height: 100px;
 }
 
 #table-overlay.loading {
@@ -56,6 +58,66 @@
 #table-overlay.loading .spinner {
 	display: block;
 }
+
+
+
+
+
+.overlay {
+	height: 100vh;
+	width: 100vw;	
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	background-color: #FFF;
+	background-color: rgba(255,255,255, 0.75);
+
+	// background: url(../img/loading.svg) center center no-repeat rgba(255,255,255, 0.75);
+	z-index: 999;
+
+	display: none;
+
+	.spinner {
+		height: 100px;
+		width: 100px;	
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		margin: -150px 0 0 -50px;
+		
+		background-color: #FFF;
+		background: url(../img/loading.svg) center center no-repeat rgba(255,255,255, 0.75);
+		z-index: 9999;		
+	}
+
+	&.loading {
+		display: block;
+	}	
+}
+
+
+// .parent {
+//   position: relative;
+// }
+// .child {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+
+
+
+
+
+
 
 #results {
 	position: relative;
@@ -81,25 +143,25 @@
 	padding-bottom: 2em;
 }
 
-.col-1-2 {
-	width: 50%;
-	float: left;
-}
+// .col-1-2 {
+// 	width: 50%;
+// 	float: left;
+// }
 
-.col-1 {
-	width: 100%;
-	clear: left;
-}
+// .col-1 {
+// 	width: 100%;
+// 	clear: left;
+// }
 
-.col-1-3 {
-	width: 33.33%;
-	float: left;
-}
+// .col-1-3 {
+// 	width: 33.33%;
+// 	float: left;
+// }
 
-.col-2-3 {
-	width: 66.66%;
-	float: left;
-}
+// .col-2-3 {
+// 	width: 66.66%;
+// 	float: left;
+// }
 
 .speciesSearch {
 	margin: 1em 0;

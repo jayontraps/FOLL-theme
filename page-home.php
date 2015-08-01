@@ -34,9 +34,9 @@ get_header(); ?>
 				<div class="h-panel">
 
 
-					
+				
 
-					<h2><?php echo $heading; ?></h2>
+					<h2><?php if( $link ): ?><a href="<?php echo $link; ?>"><?php endif; ?>	<?php echo $heading; ?><?php if( $link ): ?></a><?php endif; ?>	</h2>
 					<p><?php echo $copy; ?></p>
 
 					<?php if( $link ): ?>

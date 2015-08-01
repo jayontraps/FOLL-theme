@@ -160,3 +160,10 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load custom functions.
  */
 require get_template_directory() . '/inc/custom_functions.php';
+
+/**
+ * Adds custom fields to RCP profile / registration: https://pippinsplugins.com/adding-custom-user-fields-restrict-content-pro/
+ */
+// require get_template_directory() . '/inc/rcp-custom-user-fields.php';
+
+

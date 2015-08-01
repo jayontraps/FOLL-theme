@@ -14,7 +14,7 @@ var arriveDepart = function(results) {
 
 	var loadingClass = function(){
 	  var d = $.Deferred();
-	    table_overlay.addClass('loading');
+	    overlay.addClass('loading');
 	    d.resolve();
 	  	return d.promise();
 	};
@@ -210,15 +210,15 @@ var arrivalAndDeparture = function(results, theRange, theSeason) {
 
 	// CONSOLE RESULTS
 	// theObj[the year].datesArr = array of moment.js date objects sorted ascending
-	console.log(theObj);
-	// array of earliest dates within the year, for each year recorded
-	console.log(earliest_date_within_each_year_arr);
-	// array of latest dates within the year, for each year recorded
-	console.log(latest_date_within_each_year_arr);
+	// console.log(theObj);
+	// // array of earliest dates within the year, for each year recorded
+	// console.log(earliest_date_within_each_year_arr);
+	// // array of latest dates within the year, for each year recorded
+	// console.log(latest_date_within_each_year_arr);
 
-	console.log(earliest_date_within_second_half_arr);
+	// console.log(earliest_date_within_second_half_arr);
 
-	console.log(latest_date_within_first_half_arr);
+	// console.log(latest_date_within_first_half_arr);
 
 							
 
@@ -295,7 +295,7 @@ var arrivalAndDeparture = function(results, theRange, theSeason) {
 	}
 	$(newRows.html()).appendTo(resultsList_2);
 
-	setTimeout(function(){ table_overlay.removeClass('loading'); }, 300);
+	setTimeout(function(){ overlay.removeClass('loading'); }, 300);
 
 	// reset 
 	finalArrLen.length = 0;

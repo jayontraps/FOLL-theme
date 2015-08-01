@@ -1,7 +1,7 @@
 .foll-slider {
 	margin-top: 15px;
 	padding: 4px ;
-  	background-color: rgba(96, 125, 139, 0.8);
+  	background-color: $light_shade_primary;
   	opacity: 0;
   	transition: all 0.3s ease-out;
   	&.loaded {
@@ -37,3 +37,49 @@
 		background-color: rgba(255,255,255,.5);
 	}
 }
+
+
+// soliloquy slider overrides
+.entry-content {
+
+	.soliloquy-container .soliloquy-pager-link {
+		background:url("../img/circle.png") 
+	}
+	.soliloquy-container .soliloquy-pager-link:hover,.soliloquy-container .soliloquy-pager-link.active {
+		background-image:url("../img/circle-hover.png")
+	}
+
+	.soliloquy-container {
+		max-height: none !important;
+		.soliloquy-pager {
+			// bottom: -25px;
+			// padding: 10px 10px 35px !important;
+			 position: relative !important;
+			 bottom: -10px !important;
+		}
+
+		.soliloquy-caption-inside {
+			text-align: left;
+		}	    
+	}
+
+	.soliloquy-viewport { height: auto !important; }
+
+	.soliloquy-container .soliloquy-caption { 
+		position: relative !important; 
+		background-color: rgba(0,0,0,0.7);
+	}
+		
+}
+
+
+
+// varying height slider
+// #soliloquy-container-1655 { 
+// 	.soliloquy-wrapper {
+// 		min-height: 600px; 
+// 	}
+// }
+
+
+

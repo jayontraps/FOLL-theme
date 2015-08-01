@@ -10,7 +10,14 @@
 			onSliderLoad: function() {
 				$('.foll-slider').addClass('loaded');
 			}
-		 });		
+		 });	
+
+
+		// $('.page-slider').bxSlider({
+		// 	mode: 'fade',
+		// 	captions: true,
+		// 	controls: false
+		// });
 		
 	});
 })(jQuery);

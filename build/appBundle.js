@@ -115,8 +115,6 @@ $.ajax({
     }
 });	
 
-
-
 var nano_options = {
     target: document.getElementById('overlay'),
     id: 'mynano'
@@ -124,8 +122,7 @@ var nano_options = {
 var nanobar = new Nanobar(nano_options);
 nanobar.go( 50 ); // size bar 30%
 
-
-var table_overlay = $('#table-overlay');
+var overlay = $('.overlay');
 var search = "";
 var locList = $('#locationSearch');
 var resultsList = $('#results');	
@@ -136,15 +133,13 @@ var speciesH4 = $('#sp-name');
 
 var setUp = function(results) {
 				
-	buildFormEls(results);	
-	$('#overlay').hide();		
-
+	buildFormEls(results);			
 	validateGraphSearch(results);
 	arriveDepart(results);
 
 	var addLoadingClass = function(){
 	  var d = $.Deferred();
-	    table_overlay.addClass('loading');
+	    overlay.addClass('loading');
 	    d.resolve();
 	  	return d.promise();
 	};
@@ -238,6 +233,7 @@ var buildFormEls = function(results){
 	});	
 
 	nanobar.go(100); // Finish progress bar
+	overlay.removeClass('loading');
 };
 
 var locationInitialsToName = function(locationInitials) {
@@ -270,6 +266,9 @@ var locationInitialsToName = function(locationInitials) {
 
 	} else if(locationInitials === "WS") {
 		locationInitials = "White Swan Lake";
+		return locationInitials;
+	} else if(locationInitials === "all locations") {
+		locationInitials = "all locations";
 		return locationInitials;
 	}
 };
@@ -371,7 +370,7 @@ var emptyList = function() {
 
 var escapeDateFun = function() {
 	alert('Invalid date range.');
-	table_overlay.removeClass('loading');
+	overlay.removeClass('loading');
 	return false;
 };
 
@@ -489,6 +488,7 @@ var reverseDateString = function(dateString) {
 var buildDomEls = function(totalResults, resultsArr) {
 	var newRows = $('<span/>');
 	var convertedLocName = "";
+
 	for (var i = 0; i < totalResults; i++) {
 		convertedLocName = locationInitialsToName(resultsArr[i].location);
 		$('<tr/>', {
@@ -555,7 +555,6 @@ var displayResults = function(resultsArr, theSearch) {
 		}
 	}
 
-
 	theSearch.loc = locationInitialsToName(theSearch.loc);
 
 	var readBackResults = "<b>" + theSearch.numOfResults + " records for " + theSearch.species + " at " + theSearch.loc + ", " +summarizeDateRange + " " + chosenMonth + " " + hasMaxNumber + "</b>";
@@ -564,7 +563,7 @@ var displayResults = function(resultsArr, theSearch) {
 
 	buildDomEls(totalResults, resultsArr);
 
-	setTimeout(function(){ table_overlay.removeClass('loading'); }, 300);
+	setTimeout(function(){ overlay.removeClass('loading'); }, 500);
 };
 
 
@@ -873,7 +872,7 @@ var arriveDepart = function(results) {
 
 	var loadingClass = function(){
 	  var d = $.Deferred();
-	    table_overlay.addClass('loading');
+	    overlay.addClass('loading');
 	    d.resolve();
 	  	return d.promise();
 	};
@@ -1069,15 +1068,15 @@ var arrivalAndDeparture = function(results, theRange, theSeason) {
 
 	// CONSOLE RESULTS
 	// theObj[the year].datesArr = array of moment.js date objects sorted ascending
-	console.log(theObj);
-	// array of earliest dates within the year, for each year recorded
-	console.log(earliest_date_within_each_year_arr);
-	// array of latest dates within the year, for each year recorded
-	console.log(latest_date_within_each_year_arr);
+	// console.log(theObj);
+	// // array of earliest dates within the year, for each year recorded
+	// console.log(earliest_date_within_each_year_arr);
+	// // array of latest dates within the year, for each year recorded
+	// console.log(latest_date_within_each_year_arr);
 
-	console.log(earliest_date_within_second_half_arr);
+	// console.log(earliest_date_within_second_half_arr);
 
-	console.log(latest_date_within_first_half_arr);
+	// console.log(latest_date_within_first_half_arr);
 
 							
 
@@ -1154,7 +1153,7 @@ var arrivalAndDeparture = function(results, theRange, theSeason) {
 	}
 	$(newRows.html()).appendTo(resultsList_2);
 
-	setTimeout(function(){ table_overlay.removeClass('loading'); }, 300);
+	setTimeout(function(){ overlay.removeClass('loading'); }, 300);
 
 	// reset 
 	finalArrLen.length = 0;

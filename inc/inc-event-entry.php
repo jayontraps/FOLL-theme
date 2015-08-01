@@ -15,7 +15,7 @@ $cat = $category[0]->cat_name;
 	<div class="e-content">
 
 		<div class="e-entry-header">
-			<?php the_title( '<h4 class="e-title">', '</h4>' ); ?>
+			<h4 class="e-title"><a href="<?php the_permalink(); ?>"><?php echo $cat; ?></a></h4>
 			<div class="e-category">
 			<?php if ($cat == "Bird walks") : ?> 
 				<a href="<?php bloginfo('url'); ?>/participate/monthly-bird-walks/"><svg class="icon-e-category icon-bins"><use xlink:href="#icon-bins"></use></svg></a>
@@ -28,7 +28,7 @@ $cat = $category[0]->cat_name;
 		
 		<div class="e-content-inner">
 			<div class="e-location"><p><span class="loc">Location: </span><?php the_field('location') ?></p></div>
-			<div class="e-details"><?php the_content(); ?></div>	
+			<div class="e-details"><?php the_excerpt(); ?></div>	
 		</div>
 				
 		
