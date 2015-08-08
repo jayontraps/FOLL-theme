@@ -163,6 +163,18 @@
 // 	float: left;
 // }
 
+.summary-wrap {
+	position: relative;
+	.icon-info {
+		&.head-info {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+}
+
 .speciesSearch {
 	margin: 1em 0;
 }
@@ -319,4 +331,35 @@ button {
 	margin-bottom: 1em;
 	padding-top: 1em;
 }
+
+.icon-info {
+	display: inline-block;
+	width: 1.4rem;
+	height: 1.4rem;
+	float: left;
+	margin: 0 .5rem -.2rem 0;
+	padding: 0;
+	fill: $accent_color_3;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+
+svg[data-tip="on"] {
+	fill: darken($accent_color_3, 30%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 

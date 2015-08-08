@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 
     concat: {   
       dev: {
-        src: ['js/vendor/jquery.bxslider.js', 'js/functions.js', 'js/plugins-init.js', 'js/main.js'],
+        src: ['js/vendor/jquery.bxslider.js', 'js/vendor/bootstrap.min.js', 'js/functions.js', 'js/plugins-init.js', 'js/main.js'],
         dest: 'build/main.min.js' 
       },   
       appBundle: {

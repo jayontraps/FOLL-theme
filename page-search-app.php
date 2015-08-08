@@ -21,6 +21,27 @@ get_header(); ?>
 		
 		<div class="wrapper">	
 
+<!-- 
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on left
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on top
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on right
+</button>
+
+
+ -->
+
 			<div class="row">
 				<div class="col-1-3">				
 					<div class="selectivity-input">				
@@ -92,8 +113,17 @@ get_header(); ?>
 			    	</div>
 
 
-			    	<div class="s-wrap" id="search-summary">Results: </div>
-			
+					<div class="summary-wrap">
+											
+			    		<svg class="app-icon icon-info" data-tip="off" data-container="body" data-toggle="popover" data-placement="top" title="About the Records"  data-content="Records are included as received and most have not been reviewed by the Berkshire Records Committee.  Where an observation has been submitted by more than one observer, same day duplicates have been removed and the record displayed is not necessarily that of the first finder."><use xlink:href="#icon-info"></use></svg>
+		
+				    	<div class="s-wrap search-summary" id="search-summary">Results: </div>
+
+						<svg class="app-icon icon-info head-info" data-tip="off" data-container="body" data-toggle="popover" data-placement="left" title="Sorting options" data-content="Click on the underlined column headings to sort alphabetically or numerically."><use xlink:href="#icon-info"></use></svg>
+
+					</div>
+
+
 					<table id="results">
 						<thead>
 							<tr>

@@ -106,6 +106,20 @@ $(document).ready(function(){
     $('.interest-options').on( "click", isChecked );
 
 
+    $('.app-icon').on('click', function() {
+
+    	if ( $(this).attr('data-tip') === "on" ) {
+
+    		$(this).attr('data-tip', 'off');
+
+    	} else {
+    		$(this).attr('data-tip', 'on');
+    	}
+    });
+
+
+
+
 });
 
 

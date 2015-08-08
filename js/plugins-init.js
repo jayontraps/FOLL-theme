@@ -10,7 +10,13 @@
 			onSliderLoad: function() {
 				$('.foll-slider').addClass('loaded');
 			}
-		 });	
+		 });
+
+
+		 // bootstrap popover
+		$(function () {
+			$('[data-toggle="popover"]').popover();
+		});	
 
 
 		// $('.page-slider').bxSlider({
