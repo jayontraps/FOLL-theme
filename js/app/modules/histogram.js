@@ -1,7 +1,13 @@
 // HISTOGRAM
+var showYaxisLabel = function() {
+	$('.y-axis-head').addClass('on');
+};
+
 var validateGraphSearch = function(results) {
 		
 	$('#generateGraph').on('click', function(event){
+
+		event.preventDefault();
 
 		var speciesName = $('.speciesSearch').selectivity('value');
 		// get the start date
@@ -279,7 +285,8 @@ var setUpGraph = function(graphArr, graphObj) {
 			var ctx = document.getElementById("canvas").getContext("2d");
 			window.myBar = new Chart(ctx).Bar(barChartData, {
 				responsive : true
-			});				
+			});	
+			showYaxisLabel();
 		}	
 
 	}

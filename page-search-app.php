@@ -56,7 +56,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 		 	<ul class="tabs">
 		        <li><a href="#tab1">Search</a></li>
 		        <li><a href="#tab2">Earliest/Latest dates</a></li>
-		        <li><a href="#tab3">Histogram</a></li>
+		        <li><a href="#tab3">Annual cycle</a></li>
 		    </ul>
 
 			<div class="tab_container">
@@ -179,7 +179,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 
 			
 				<div id="tab3" class="tab_content">
-					<div class="graph-wrapper">
+					<div class="graph-options-wrapper">
 
 					 	<h4>Histogram range:</h4>
 			         	
@@ -238,15 +238,18 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 		         			<option value="1994">1994</option>
 		         		</select>
 
+		         		<a href="#" class="btn" id="generateGraph" >Generate graph</a>
+
 			     	</div>
-					
+<!-- 					
 					<div class="date_set">
 				    	<a href="#" class="btn" id="generateGraph" >Generate graph</a>
 			    	</div>	
-
+ -->
 					<!--<div id="error-msg"></div>	 -->	
 
-			     	<div style="width: 50%">
+			     	<div class="bar-container" style="width: 50%">
+			     		<div class="y-axis-head">Bird-days <svg class="app-icon icon-info bird-days-info" data-tip="off" data-container="body" data-toggle="popover" data-placement="right" title="Bird-days" data-content="This is the sum of the maximum number of birds recorded each day divided by the number of years searched."><use xlink:href="#icon-info"></use></svg></div>
 						<canvas id="canvas" height="450" width="600"></canvas>
 					</div>
 					

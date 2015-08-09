@@ -71,6 +71,11 @@ jQuery(document).ready(function($) {
     $("ul.tabs li:first").addClass("active").show(); //Activate first tab
     $(".tab_content:first").show(); //Show first tab content
     
+    $("ul.tabs li").on('click', 'a', function(e) {
+        e.preventDefault();
+    });
+
+
     //On Click Event
     $("ul.tabs li").click(function() {
         $("ul.tabs li").removeClass("active"); //Remove any "active" class

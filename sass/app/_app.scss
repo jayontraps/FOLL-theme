@@ -323,11 +323,11 @@ button {
 }
 
 
-.graph-wrapper {
+.graph-options-wrapper {
 /*	margin-top: 3em;*/
 }
 
-.graph-wrapper > div {
+.graph-options-wrapper > div {
 	margin-bottom: 1em;
 	padding-top: 1em;
 }
@@ -343,6 +343,10 @@ button {
 	&:hover {
 		cursor: pointer;
 	}
+	&.bird-days-info {
+		float: none;
+	    margin: 0px 0px -5px 5px;
+	}
 }
 
 
@@ -350,6 +354,18 @@ svg[data-tip="on"] {
 	fill: darken($accent_color_3, 30%);
 }
 
+.bar-container {
+	position: relative;
+	margin-top: 1rem;
+}
+
+.y-axis-head {
+	opacity: 0;
+	font-size: $small_font_size;
+	&.on {
+		opacity: 1;
+	}
+}
 
 
 

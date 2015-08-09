@@ -71,6 +71,11 @@ jQuery(document).ready(function($) {
     $("ul.tabs li:first").addClass("active").show(); //Activate first tab
     $(".tab_content:first").show(); //Show first tab content
     
+    $("ul.tabs li").on('click', 'a', function(e) {
+        e.preventDefault();
+    });
+
+
     //On Click Event
     $("ul.tabs li").click(function() {
         $("ul.tabs li").removeClass("active"); //Remove any "active" class
@@ -569,9 +574,15 @@ var displayResults = function(resultsArr, theSearch) {
 
 
 // HISTOGRAM
+var showYaxisLabel = function() {
+	$('.y-axis-head').addClass('on');
+};
+
 var validateGraphSearch = function(results) {
 		
 	$('#generateGraph').on('click', function(event){
+
+		event.preventDefault();
 
 		var speciesName = $('.speciesSearch').selectivity('value');
 		// get the start date
@@ -849,7 +860,8 @@ var setUpGraph = function(graphArr, graphObj) {
 			var ctx = document.getElementById("canvas").getContext("2d");
 			window.myBar = new Chart(ctx).Bar(barChartData, {
 				responsive : true
-			});				
+			});	
+			showYaxisLabel();
 		}	
 
 	}
