@@ -15,19 +15,10 @@
       if (is_404() || is_search() || is_archive() ) {
         // do nothing
       } else {
-
-        if($post->post_parent) {
-          $children = wp_list_pages("sort_column=menu_order&title_li=&child_of=".$post->post_parent."&echo=0");
-        } else {
-           $children = wp_list_pages("sort_column=menu_order&title_li=&child_of=".$post->ID."&echo=0");
-        }
-
-        if ($children) { ?>
-          <ul class="nav sub-menu-nav">
-            <?php echo $children; ?>
-          </ul>
-        <?php } 
-
+        echo "<ul class='nav sub-menu-nav'";
+        wp_list_pages( array('title_li'=>'','include'=>get_post_top_ancestor_id()) );
+        wp_list_pages( array('title_li'=>'','depth'=>1,'child_of'=>get_post_top_ancestor_id()) );
+        echo "</ul>";
       }
 
 ?>

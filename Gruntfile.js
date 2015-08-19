@@ -4,7 +4,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-
     jshint: {
       options: {
         eqeqeq: true,
@@ -12,11 +11,10 @@ module.exports = function(grunt) {
         undef: false,
         unused: false
       },
-      target: {
-        src: ['js/*.js', 'js/app/plugins-init.js', 'js/app/**/*.js']               
+      target: {           
+        src: ['js/*.js', 'js/app/plugins-init.js', 'js/app/src/**/*.js']                  
       }
     },
-
 
   
     sass: {
@@ -57,30 +55,17 @@ module.exports = function(grunt) {
     },   
 
 
-    
-
     concat: {   
-      dev: {
-        src: ['js/vendor/jquery.bxslider.js', 'js/vendor/bootstrap.min.js', 'js/functions.js', 'js/plugins-init.js', 'js/main.js'],
+      main: {
+        src: ['js/vendor/jquery.bxslider.js', 'js/vendor/bootstrap.min.js', 'js/functions.js', 'js/main-plugins-init.js', 'js/main.js'],
         dest: 'build/main.min.js' 
       },   
-      appBundle: {
-        src: ['js/app/plugins-init.js', 'js/app/modules/setup.js', 'js/app/modules/search.js', 'js/app/modules/histogram.js', 'js/app/modules/arriveDepart.js'],
-        dest: 'build/appBundle.js'
-      },
+
       dist: {
-        src: ['js/app/config.js', 'build/plugins.min.js', 'build/appBundle.js'],
+        src: ['build/plugins.min.js', 'js/app/plugins-init.js', 'build/bundle.js'],
         dest: 'build/app.min.js'
       }
-      // test: {
-      //   src: ['js/app/plugins-init.js', 'js/app/modules/setup.js', 'js/app/modules/search.js', 'js/app/modules/histogram.js', 'js/app/modules/arriveDepart.js'],
-      //   dest: 'build/testBundle.js'        
-      // }
     }, 
-
-
-
-
 
     uglify: {
       // dev: {
@@ -103,6 +88,15 @@ module.exports = function(grunt) {
     },
 
 
+    browserify: {
+      options: {
+        browserifyOptions: {
+           debug: true
+        }
+      },      
+      'build/bundle.js': ['js/app/src/**/*.js']      
+    },
+
 
 
     watch: {
@@ -113,12 +107,11 @@ module.exports = function(grunt) {
         files: ['sass/**/*.scss'],
         tasks: ['sass:dev', 'autoprefixer']
       },
-      js: {
-        files: ['js/*.js', 'js/app/**/*.js', '!build/main.min.js'], // Watch for changes in JS files except for script.min.js to avoid reload loops
-        tasks: ['jshint', 'concat:appBundle', 'concat:dev', 'concat:dist']
+      js: {      
+        files: ['js/*.js', 'js/app/src/**/*.js', 'js/app/plugins-init.js', '!build/main.min.js'],
+        tasks: ['jshint', 'browserify', 'concat:main', 'concat:dist']
       }
     },
-
 
 
     browserSync: {
@@ -133,8 +126,7 @@ module.exports = function(grunt) {
           watchTask: true,
           debugInfo: true,
           logConnections: true,
-          notify: true,
-          // proxy: appConfig['proxy'],          
+          notify: true,        
           proxy: "localhost/foll",
           ghostMode: {
             scroll: true,
@@ -144,9 +136,7 @@ module.exports = function(grunt) {
         }
       }
     },    
-
   });
-
 
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -156,12 +146,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');  
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-browserify');
 
 
-  grunt.registerTask('default', ['jshint', 'sass:dev', 'concat:appBundle', 'concat:dev', 'concat:dist', 'autoprefixer', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['jshint', 'sass:dev', 'browserify', 'concat:main', 'concat:dist', 'autoprefixer', 'browserSync', 'watch']);
   
-  grunt.registerTask('production', ['jshint', 'sass:prod', 'concat:appBundle', 'concat:dev', 'concat:dist', 'uglify:prod', 'autoprefixer']);
-
-
+  grunt.registerTask('production', ['jshint', 'sass:prod', 'browserify', 'concat:main', 'concat:dist', 'uglify:prod', 'autoprefixer']);
 
 };

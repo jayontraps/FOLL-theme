@@ -1,4 +1,5 @@
-$(document).ready(function(){
+(function($) {	
+	$(document).ready(function(){
 
 	// https://www.lullabot.com/blog/article/importing-css-breakpoints-javascript
 	// get currently active media query
@@ -117,11 +118,8 @@ $(document).ready(function(){
     	}
     });
 
-
-
-
 });
-
+})(jQuery);
 
 
 
