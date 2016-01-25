@@ -1,8 +1,32 @@
 .footer-container {
 	background-color: $primary_color;
 }
-.footer-widgets {
-	text-align: center;
-	font-size: $small_font_size;
-	padding: 2em 0;
+
+.foll-footer {
+	> div {
+		color: $mid_grey;
+		font-size: $small_font_size;
+		padding: 2em 0;
+
+		a {
+			color: $off_white;
+
+		}
+
+		@include breakpoint(tablet) {
+
+			&:nth-child(2) {
+				text-align: center;
+			}
+			&:nth-child(3) {
+				text-align: right;
+			}
+		}
+	}	
 }
+
+
+// .footer-widgets {
+// 	font-size: $small_font_size;
+// 	padding: 2em 0;
+// }

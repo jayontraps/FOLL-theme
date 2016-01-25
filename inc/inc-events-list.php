@@ -2,6 +2,7 @@
 $today = date('Ymd');
 $the_query = new WP_Query( array(
 	'post_type'   => 'events',
+    'posts_per_page'   => -1,
 	'post_status' => 'publish',
 	'meta_key'    => 'expire_date',
     'meta_query' => array(

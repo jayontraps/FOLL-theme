@@ -122,6 +122,7 @@
 }
 
 .bx-wrapper .bx-controls-direction a {
+	display: none;
 	position: absolute;
 	top: 50%;
 	margin-top: -16px;
@@ -130,6 +131,10 @@
 	height: 64px;
 	// text-indent: -9999px;
 	z-index: 9999;
+	@include breakpoint(mobile) {
+		display: block;
+	}
+	
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {

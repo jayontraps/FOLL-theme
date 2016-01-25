@@ -23,6 +23,30 @@
 		}
 
 	}
+
+
+	&.meetings {
+		.e-weekday {
+			background-color: $purple;
+		}
+		.e-title a {
+			color: $purple;
+			border-bottom: 2px solid $purple;
+		}
+
+		.loc {
+			color: $purple;
+		}
+		.icon-e-category {
+			fill: $purple;
+			&:hover {
+				fill: darken($purple, 30);
+			}
+		}
+
+	}
+
+
 	&.work-party {
 		.e-weekday {
 			background-color: $accent_color_2;

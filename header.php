@@ -32,14 +32,8 @@
 		<header id="masthead" class="site-header innerWrap" role="banner">
 
 			<div class="site-branding">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<div class="bittern">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bittern.png" alt="FOLL bittern" />
-					</div>
-						
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">											
 					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">
-	<!-- 
-					<h1 class="site-title">Friends of Lavell's Lake</h1> -->
 				</a>
 			</div><!-- .site-branding -->
 

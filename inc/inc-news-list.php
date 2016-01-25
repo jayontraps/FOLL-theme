@@ -28,7 +28,7 @@ $the_query = new WP_Query( $args ); ?>
 	<!-- pagination here -->
 
    <?php
-      if (function_exists(custom_pagination)) {
+      if (function_exists('custom_pagination')) {
         custom_pagination($the_query->max_num_pages,"",$paged);
       }
     ?>	

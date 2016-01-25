@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single sites posts.
+ * The template for displaying all single avifauna posts.
  *
  * @package foll
  */
@@ -19,7 +19,7 @@ get_header(); ?>
 				<div class="main-content">
 
 					<div class="parent_title">			
-						<h2>Sites of interest</h2>
+						<h2>Avifauna</h2>
 					</div>
 
 					<div class="col-1-3">

@@ -29,7 +29,7 @@
 
         .tb-links {
         	border-right: 2px solid $primary_color;      
-        	padding: 0 1rem;  
+        	padding: 0 .5rem;  
         	text-decoration: none;
         	color: $off_white;
         	font-size: $small_font_size;
@@ -37,7 +37,10 @@
         	&:hover {
         		opacity: 1;
         		text-decoration: underline;
-        	}	
+        	}
+        	@include breakpoint(tablet)	{
+        		padding: 0 1rem;  
+        	}
         }
 
         &:last-of-type {
@@ -52,19 +55,22 @@
         }        
     }  
 
-	
+	&:last-of-type {
+		float: right;
+	}		
 
-
-
-	@include breakpoint(tablet-between) {
-		&:last-of-type {
-			float: right;
-		}		
+	form {
+		margin-bottom: 0;
 	}
 
 }
 
-
+.search-btn {
+	display: none;
+	@include breakpoint(tablet-portrait) {
+		display: block;
+	}
+}
 
 
 

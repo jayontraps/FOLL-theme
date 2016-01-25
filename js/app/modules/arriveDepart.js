@@ -13,20 +13,20 @@ var date_sort_asc = function (date1, date2) {
 var arriveDepart = function(results) {
 
 	var loadingClass = function(){
-	  var d = $.Deferred();
-	    overlay.addClass('loading');
-	    d.resolve();
-	  	return d.promise();
+		var d = $.Deferred();
+		overlay.addClass('loading');
+		d.resolve();
+		return d.promise();
 	};
 
 
 	var fireRes = function(theRange, theSeason){
-	  var d = $.Deferred();
-	  setTimeout(function() {
-	    arrivalAndDeparture(results, theRange, theSeason);
-	    d.resolve();
-	  }, 100);
-	  return d.promise();
+		var d = $.Deferred();
+		setTimeout(function() {
+			arrivalAndDeparture(results, theRange, theSeason);
+			d.resolve();
+		}, 100);
+		return d.promise();
 	};	
 
 

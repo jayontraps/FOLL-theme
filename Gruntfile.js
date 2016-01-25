@@ -126,8 +126,17 @@ module.exports = function(grunt) {
           watchTask: true,
           debugInfo: true,
           logConnections: true,
-          notify: true,        
+          notify: true,  
+
           proxy: "localhost/foll",
+          // proxy: {
+          //   target: "localhost/foll",
+          //   middleware: function (req, res, next) {
+          //     res.setHeader('Access-Control-Allow-Origin', '*');
+          //     next();
+          //   }
+          // },
+
           ghostMode: {
             scroll: true,
             links: true,

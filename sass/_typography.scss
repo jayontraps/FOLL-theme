@@ -53,7 +53,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.313em;
   font-family: $heading_font;
   font-weight: $heading_font_weight;
-  text-transform: uppercase;
 }
 
 h1 {
@@ -111,13 +110,13 @@ h6 {
 
 .main-content {
   h1, h2, h3, h4, h5, h6 {
-    text-transform: capitalize;
+    // text-transform: capitalize;
   }
   h1 {
     font-size: 1.8rem;    
   }  
 }
 
-p, ul, ol {
+p, ul, ol, form {
   margin: 0 0 1.5rem 0;
 }

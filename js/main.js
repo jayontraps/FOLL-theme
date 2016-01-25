@@ -107,6 +107,25 @@
     $('.interest-options').on( "click", isChecked );
 
 
+
+	// giftaid-checkbox
+	var giftAidCheckbox = document.getElementById('giftaid-checkbox');
+	var rcp_giftaid = document.getElementById('rcp_giftaid');
+
+	$(giftAidCheckbox).on('change', function(e) {
+		if ($(this).is(':checked')) {
+			$(rcp_giftaid).val('Yes');
+		} else {
+			$(rcp_giftaid).val('No');
+		}
+	});
+
+
+
+
+
+
+    // popover styles
     $('.app-icon').on('click', function() {
 
     	if ( $(this).attr('data-tip') === "on" ) {

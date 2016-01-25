@@ -60,6 +60,7 @@ function foll_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'foll' ),
+		'members' => __( 'Members Menu', 'foll' ),
 	) );
 
 	/*
@@ -111,7 +112,28 @@ function foll_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
-	) );	
+	) );
+
+
+	register_sidebar( array(
+		'name'          => __( 'Donate row - above logo', 'foll' ),
+		'id'            => 'sidebar-3',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Donate row - below logo', 'foll' ),
+		'id'            => 'sidebar-4',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="last-widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'foll_widgets_init' );
 
@@ -164,6 +186,7 @@ require get_template_directory() . '/inc/custom_functions.php';
 /**
  * Adds custom fields to RCP profile / registration: https://pippinsplugins.com/adding-custom-user-fields-restrict-content-pro/
  */
-// require get_template_directory() . '/inc/rcp-custom-user-fields.php';
+require get_template_directory() . '/inc/rcp-custom-user-fields.php';
+require get_template_directory() . '/inc/rcp-custom-user-fields-gift-aid.php';
 
 

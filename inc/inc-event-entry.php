@@ -5,7 +5,13 @@ $cat = $category[0]->cat_name;
 ?>
 
 
-<div class="e-entry <?php if ($cat == "Bird walks") {echo "bird-walk";} else {echo "work-party";}?>">
+<div class="e-entry <?php if ($cat == "Bird walks") {
+		echo "bird-walk";
+	} elseif ($cat == "Meetings") {
+		echo "meetings";
+	} else {
+		echo "work-party";
+	}?>">
 
 	<div class="e-date">
 		<div class="e-weekday"><?php echo date('D', $time); ?></div>
@@ -21,6 +27,10 @@ $cat = $category[0]->cat_name;
 				<a href="<?php bloginfo('url'); ?>/participate/monthly-bird-walks/"><svg class="icon-e-category icon-bins"><use xlink:href="#icon-bins"></use></svg></a>
 			<?php elseif ($cat == "Work parties") : ?>
 				<a href="<?php bloginfo('url'); ?>/participate/volunteer-work-parties/"><svg class="icon-e-category icon-wheel-barrow"><use xlink:href="#icon-wheel-barrow"></use></svg></a>
+
+			<?php elseif ($cat == "Meetings") : ?>
+				<svg class="icon-e-category icon-meetings"><use xlink:href="#meetings"></use></svg>
+
 			<?php endif; ?>			
 
 			</div>			

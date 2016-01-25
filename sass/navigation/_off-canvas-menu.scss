@@ -23,83 +23,75 @@
 	position: relative;	
 }
 
+[role="main"] {
+	margin-left: 0;
+	float: left;		
+}	
 
-.js {
+.js-nav {
+	margin-right: -200%;
+	float: left;		
+}	
 
+.active-nav {
 
-
-	[role="main"] {
-		margin-left: 0;
-		float: left;		
-	}	
-
-	.js-nav {
-		margin-right: -200%;
-		float: left;		
-	}	
-
-	.active-nav {
-
-
-
-		[role="main"]{
-			margin-right: -100%;
-		}
-
-		.js-nav {
-			margin-right: -100%;
-			float: right;
-		}				
+	[role="main"]{
+		margin-right: -100%;
 	}
 
-	.active-sidebar {
+	.js-nav {
+		margin-right: -100%;
+		float: right;
+	}				
+}
 
+.active-sidebar {
 
+	[role="main"] {
+		margin-left: -85%;
+	}		
 
+	.js-nav {
+		margin-left: 0;
+		width: 90%;
+		background-color: $background_color;
+	}
+
+	@include breakpoint(mobile) {
 		[role="main"] {
-			margin-left: -100%;
+			margin-left: -90%;
 		}		
 
 		.js-nav {
 			margin-left: 0;
-			width: 100%;
-		}
-
-		@include breakpoint(mobile) {
-			[role="main"] {
-				margin-left: -90%;
-			}		
-
-			.js-nav {
-				margin-left: 0;
-				width: 90%;
-				background-color: $background_color;
-			}				
-		}
-
-
-
-		@include breakpoint(tablet-landscape) {
-			[role="main"] {
-				margin-left: -40%;
-			}		
-
-			.js-nav {
-				margin-left: 0;
-				width: 40%;
-			}				
-		}
-
-		@include breakpoint(small-screen) {
-			[role="main"] {
-				margin-left: -30%;
-			}		
-
-			.js-nav {
-				margin-left: 0;
-				width: 30%;
-			}				
-		}		
-			
+			width: 90%;
+			background-color: $background_color;
+		}				
 	}
+
+
+
+	@include breakpoint(tablet-landscape) {
+		[role="main"] {
+			margin-left: -40%;
+		}		
+
+		.js-nav {
+			margin-left: 0;
+			width: 40%;
+		}				
+	}
+
+	@include breakpoint(small-screen) {
+		[role="main"] {
+			margin-left: -30%;
+		}		
+
+		.js-nav {
+			margin-left: 0;
+			width: 30%;
+		}				
+	}		
+		
 }
+

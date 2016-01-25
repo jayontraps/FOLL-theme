@@ -12,6 +12,10 @@
 	@extend .cf;
 	@include breakpoint(medium-screen) {
 		width: 100%;
+	}
+
+	&.narrow {
+		max-width: $max-width-medium;
 	}	
 }
 

@@ -82,7 +82,9 @@
 .sub-menu-bar-join {
 	.foll-btn {
 		float: left;
-		margin-right: 4rem;
+		@include breakpoint(tablet-portrait) {
+			margin-right: 4rem;
+		}		
 	}
 }
 

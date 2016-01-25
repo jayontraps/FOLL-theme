@@ -25,8 +25,11 @@
    	  ?>
 
 	<footer id="colophon" class="footer-container clear" role="contentinfo">
-		<div class="site-info innerWrap">
-			<?php get_sidebar( 'footer' ); ?>
+		<div class="site-info foll-footer innerWrap">
+			<div class="col-1-3">&copy; Friends of Lavell’s Lake <?php echo date('Y'); ?>. All rights reserved.</div>
+			<div class="col-1-3"><?php get_sidebar( 'footer' ); ?></div>
+			<div class="col-1-3"><a href="<?php bloginfo('url'); ?>/contact-us">Contact us</a></div>
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 

@@ -1,18 +1,18 @@
 <?php
 
 function enqueue_styles_scripts() { 
-	wp_enqueue_style( 'foll-style', get_template_directory_uri() . '/build/screen.css', array(), '123' );
+	wp_enqueue_style( 'foll-style', get_template_directory_uri() . '/build/screen.css', array(), '125' );
 	
-	wp_enqueue_script( 'foll-modenizr', get_template_directory_uri() . '/js/vendor/modernizr.custom.98000.js', array(), false);		
+	// wp_enqueue_script( 'foll-modenizr', get_template_directory_uri() . '/js/vendor/modernizr.custom.98000.js', array(), false);		
     
 	wp_enqueue_style('gfonts', 'http://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
 
-	wp_enqueue_script( 'foll-main', get_template_directory_uri() . '/build/main.min.js', array('jquery'),'123', true);	
+	wp_enqueue_script( 'foll-main', get_template_directory_uri() . '/build/main.min.js', array('jquery'),'125', true);	
 
 	// wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 
 	if ( is_page_template( 'page-search-app.php' ) ) {
-		wp_enqueue_script( 'foll-app', get_template_directory_uri() . '/build/app.min.js', array('jquery'), '123', true);	
+		wp_enqueue_script( 'foll-app', get_template_directory_uri() . '/build/app.min.js', array('jquery'), '125', true);	
 	}	
 } 
 
@@ -44,9 +44,9 @@ function get_post_top_ancestor_id(){
 
 
 // show admin bar only for admins and editors
-if (!current_user_can('edit_posts')) {
-	add_filter('show_admin_bar', '__return_false');
-}
+// if (!current_user_can('edit_posts')) {
+// 	add_filter('show_admin_bar', '__return_false');
+// }
 
 // Soliloquy slider 
 add_filter( 'soliloquy_defaults', 'tgm_soliloquy_default_settings', 20, 2 );
@@ -62,6 +62,12 @@ function tgm_soliloquy_default_settings( $defaults, $post_id ) {
     
 }
 
+//https://codex.wordpress.org/Function_Reference/the_excerpt 
+// Make the "read more" link to the post
+function new_excerpt_more( $more ) {
+    return ' <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( '... read more', 'your-text-domain' ) . '</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 
 
