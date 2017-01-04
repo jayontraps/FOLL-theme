@@ -1,0 +1,76 @@
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%"
+	 height="100%" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#212121;}
+
+
+.circle	{
+	fill:#fafafa;
+	animation:	circleAnim 1s infinite;
+	-webkit-animation:	circleAnim 1s infinite;
+	-moz-animation:	circleAnim 1s infinite;
+	-o-animation:	circleAnim 1s infinite;
+}
+
+@keyframes circleAnim {
+	0%	{ opacity: 0; }
+	50%	{ opacity: 1; }
+	100%	{ opacity: 0; }
+}
+@-webkit-keyframes circleAnim {
+	0%	{ opacity: 0; }
+	50%	{ opacity: 1; }
+	100%	{ opacity: 0; }
+}
+@-moz-keyframes circleAnim {
+	0%	{ opacity: 0; }
+	50%	{ opacity: 1; }
+	100%	{ opacity: 0; }
+}
+@-o-keyframes circleAnim {
+	0%	{ opacity: 0; }
+	50%	{ opacity: 1; }
+	100%	{ opacity: 0; }
+}
+
+#c10 { animation-delay: .1s;  -webkit-animation-delay: .1s; }
+#c8 { animation-delay: .2s;  -webkit-animation-delay: .2s; }
+#c6 { animation-delay: .3s;  -webkit-animation-delay: .3s; }
+#c4 { animation-delay: .4s;  -webkit-animation-delay: .4s; }
+#c2 { animation-delay: .5s;  -webkit-animation-delay: .5s; }
+#c1 { animation-delay: .6s;  -webkit-animation-delay: .6s; }
+#c3 { animation-delay: .7s;  -webkit-animation-delay: .7s; }
+#c5 { animation-delay: .8s;  -webkit-animation-delay: .8s; }
+#c7 { animation-delay: .9s;  -webkit-animation-delay: .9s; }
+
+</style>
+<g id="container" class="colors">
+	<circle class="st0" cx="200" cy="200" r="197.5"/>
+</g>
+<g id="dots" class="colors">
+	<path class="circle" id="c1" d="M147.87,360.8L147.87,360.8L147.87,360.8c-9.2-2.98-14.23-12.85-11.26-22.04l0,0
+		c2.98-9.2,12.85-14.229,22.05-11.26l0,0c9.19,2.979,14.23,12.85,11.25,22.05l0,0c-2.4,7.4-9.26,12.11-16.65,12.11l0,0
+		C151.48,361.66,149.66,361.38,147.87,360.8z"/>
+	<path class="circle" id="c2" d="M230.24,349.52c-2.99-9.2,2.04-19.069,11.229-22.06h0.01c9.19-2.98,19.061,2.04,22.051,11.24l0,0
+		c2.989,9.189-2.04,19.06-11.24,22.05l0,0c0,0,0,0,0.01,0l0,0c-1.8,0.58-3.62,0.859-5.42,0.859l0,0
+		C239.51,361.609,232.649,356.91,230.24,349.52z"/>
+	<path class="circle" id="c3" d="M63.36,299.46c-5.7-7.811-3.98-18.75,3.83-24.44l0,0c7.81-5.7,18.76-3.989,24.45,3.83l0,0
+		c5.69,7.8,3.98,18.75-3.83,24.45l0,0c-3.11,2.26-6.72,3.36-10.3,3.36l0,0C72.11,306.66,66.78,304.16,63.36,299.46z"/>
+	<path class="circle" id="c4" d="M312.3,303.18c-7.82-5.689-9.54-16.63-3.86-24.45l0,0c5.69-7.81,16.63-9.54,24.45-3.859l0,0
+		c7.82,5.689,9.54,16.64,3.86,24.449l0,0c-3.431,4.711-8.76,7.211-14.17,7.211l0,0C319.01,306.53,315.41,305.439,312.3,303.18z"/>
+	<path class="circle" id="c5" d="M31,200.18c-0.01-9.67,7.82-17.51,17.48-17.52l0,0c9.67-0.01,17.51,7.82,17.52,17.48l0,0
+		c0.01,9.67-7.82,17.51-17.48,17.521l0,0c-0.01,0-0.02,0-0.02,0l0,0C38.84,217.66,31.01,209.84,31,200.18z"/>
+	<path class="circle" id="c6" d="M334,200c0-0.01,0-0.03,0-0.04l0,0c0-0.08,0-0.17,0-0.25l0,0c-0.021-9.66,7.8-17.51,17.46-17.54l0,0
+		c9.67-0.02,17.52,7.8,17.54,17.47l0,0c0,0.07,0,0.13,0,0.2l0,0c0,0.05,0,0.11,0,0.16l0,0l0,0l0,0c0,9.66-7.84,17.5-17.5,17.5l0,0
+		C341.83,217.5,334,209.66,334,200z"/>
+	<path class="circle" id="c7" d="M67.03,125.27c-7.82-5.68-9.56-16.62-3.88-24.45l0,0c0,0,0,0,0,0.01l0,0c5.67-7.83,16.62-9.57,24.44-3.89l0,0
+		c7.82,5.68,9.56,16.62,3.88,24.44l0,0c-3.42,4.72-8.76,7.23-14.17,7.23l0,0C73.73,128.6,70.13,127.52,67.03,125.27z"/>
+	<path class="circle" id="c8" d="M308.28,121.04L308.28,121.04c-5.711-7.81-4-18.75,3.8-24.46l0,0c7.8-5.7,18.75-4,24.45,3.81l0,0
+		c5.71,7.8,4,18.75-3.801,24.45l0,0c-3.109,2.28-6.729,3.37-10.31,3.37l0,0C317.02,128.21,311.7,125.73,308.28,121.04z"/>
+	<path class="circle" id="c9" d="M136.33,61.37c-3-9.18,2.01-19.06,11.2-22.06l0,0c9.19-3,19.07,2.02,22.07,11.21l0,0
+		c3,9.18-2.02,19.06-11.21,22.06l0,0c-1.8,0.59-3.63,0.87-5.43,0.87l0,0C145.59,73.45,138.73,68.76,136.33,61.37z"/>
+	<path class="circle" id="c10" d="M241.21,72.45c-9.2-2.97-14.25-12.83-11.28-22.03l0,0c2.97-9.2,12.83-14.25,22.03-11.28l0,0
+		c9.2,2.97,14.25,12.84,11.28,22.03l0,0c-2.391,7.41-9.261,12.13-16.65,12.13l0,0C244.81,73.3,242.99,73.03,241.21,72.45z"/>
+</g>
+</svg>
