@@ -11,19 +11,19 @@ module.exports = function(grunt) {
         undef: false,
         unused: false
       },
-      target: {           
-        src: ['js/*.js', 'js/app/plugins-init.js', 'js/app/src/**/*.js']                  
+      target: {
+        src: ['js/*.js', 'js/app/plugins-init.js', 'js/app/src/**/*.js']
       }
     },
 
-  
+
     sass: {
       options: {
         precision: 5
       },
       dev: {
         options: {
-          style: 'nested', // compact, compressed, nested or expanded
+          style: 'nested',
           lineNumbers: true
         },
         files: {
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
       },
       prod: {
         options: {
-          style: 'compressed', // compact, compressed, nested or expanded
+          style: 'compressed',
           lineNumbers: true
         },
         files: {
@@ -52,20 +52,20 @@ module.exports = function(grunt) {
         src: 'build/*.css',
         dest: 'build/'
       }
-    },   
+    },
 
 
-    concat: {   
+    concat: {
       main: {
         src: ['js/vendor/jquery.bxslider.js', 'js/vendor/bootstrap.min.js', 'js/functions.js', 'js/main-plugins-init.js', 'js/main.js'],
-        dest: 'build/main.min.js' 
-      },   
+        dest: 'build/main.min.js'
+      },
 
       dist: {
         src: ['build/plugins.min.js', 'js/app/plugins-init.js', 'build/bundle.js'],
         dest: 'build/app.min.js'
       }
-    }, 
+    },
 
     uglify: {
       // dev: {
@@ -93,8 +93,8 @@ module.exports = function(grunt) {
         browserifyOptions: {
            debug: true
         }
-      },      
-      'build/bundle.js': ['js/app/src/**/*.js']      
+      },
+      'build/bundle.js': ['js/app/src/**/*.js']
     },
 
 
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
         files: ['sass/**/*.scss'],
         tasks: ['sass:dev', 'autoprefixer']
       },
-      js: {      
+      js: {
         files: ['js/*.js', 'js/app/src/**/*.js', 'js/app/plugins-init.js', '!build/main.min.js'],
         tasks: ['jshint', 'browserify', 'concat:main', 'concat:dist']
       }
@@ -126,17 +126,8 @@ module.exports = function(grunt) {
           watchTask: true,
           debugInfo: true,
           logConnections: true,
-          notify: true,  
-
-          proxy: "localhost/foll",
-          // proxy: {
-          //   target: "localhost/foll",
-          //   middleware: function (req, res, next) {
-          //     res.setHeader('Access-Control-Allow-Origin', '*');
-          //     next();
-          //   }
-          // },
-
+          notify: true,
+          proxy: "foll.dev",
           ghostMode: {
             scroll: true,
             links: true,
@@ -144,22 +135,22 @@ module.exports = function(grunt) {
           }
         }
       }
-    },    
+    },
   });
 
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-contrib-concat');  
-  grunt.loadNpmTasks('grunt-contrib-jshint');  
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-browserify');
 
 
   grunt.registerTask('default', ['jshint', 'sass:dev', 'browserify', 'concat:main', 'concat:dist', 'autoprefixer', 'browserSync', 'watch']);
-  
+
   grunt.registerTask('production', ['jshint', 'sass:prod', 'browserify', 'concat:main', 'concat:dist', 'uglify:prod', 'autoprefixer']);
 
 };
