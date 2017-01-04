@@ -16,12 +16,22 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+
+<style type="text/css">
+
+	ul#rcp_subscription_levels li:first-of-type {
+	    display: none;
+	}
+
+</style>
+
+
 </head>
 
 <body <?php body_class(); ?>>
 <?php include "inc/inc-svg-defs.php"; ?>
 <div id="page" class="hfeed site wrap">
-	
+
 
 	<?php include "inc/inc-top-bar.php";?>
 
@@ -32,46 +42,35 @@
 		<header id="masthead" class="site-header innerWrap" role="banner">
 
 			<div class="site-branding">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">											
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">
 				</a>
 			</div><!-- .site-branding -->
 
 			<nav role="navigation" class="cf desktop-nav-wrap" id="lg-screen-nav" itemscope itemtype='https://schema.org/SiteNavigationElement'>
-				<?php wp_nav_menu( array( 
+				<?php wp_nav_menu( array(
 				'theme_location' => 'primary',
 				'menu_class'      => 'desktop-nav nav' ) ); ?>
 			</nav>
 		</header><!-- #masthead -->
 	</div>
 
-	<?php 
-		// if ( is_page_template( 'page-home.php' ) ) {
-		// // Returns true when 'about.php' is being used.
-		// 	echo "is";
-		// } else {
-		// // Returns false when 'about.php' is not being used.
-		// 	echo "not";
-		// }
-
+	<?php
 		if ( !is_page_template( 'page-home.php' ) ) {
-			include "inc/inc-sub-menu-bar.php"; 
-		} 
+			include "inc/inc-sub-menu-bar.php";
+		}
 	 ?>
 
 
-	
+
 
 
 
 
 	<div class="off-canvas-navigation menu-button menu-button-mb">
-<!-- 		<div class="menu-title">
-	  		<h2>Menu</h2>
-		</div> -->
 	  	<div class="menu menu-btn">
 		    <span class="menu-global menu-top"></span>
 		    <span class="menu-global menu-middle"></span>
 		    <span class="menu-global menu-bottom"></span>
-	  	</div>                
-	</div> 	
+	  	</div>
+	</div>

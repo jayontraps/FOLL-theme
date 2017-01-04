@@ -69,25 +69,29 @@ function pw_rcp_add_member_edit_fields( $user_id = 0 ) {
 }
 add_action( 'rcp_edit_member_after', 'pw_rcp_add_member_edit_fields' );
  
+ 
 /**
  * Determines if there are problems with the registration data submitted
  *
  */
-function pw_rcp_validate_user_fields_on_register( $posted ) {
+// function pw_rcp_validate_user_fields_on_register( $posted ) {
 
-	if( empty( $posted['rcp_phone'] ) ) {
-		rcp_errors()->add( 'invalid_phone', __( 'Please enter your phone', 'rcp' ), 'register' );
-	}
+// 	if( empty( $posted['rcp_phone'] ) ) {
+// 		rcp_errors()->add( 'invalid_phone', __( 'Please enter your phone', 'rcp' ), 'register' );
+// 	}
 
-	if( empty( $posted['rcp_address'] ) ) {
-		rcp_errors()->add( 'invalid_address', __( 'Please enter your address', 'rcp' ), 'register' );
-	}
-	if( empty( $posted['rcp_postcode'] ) ) {
-		rcp_errors()->add( 'invalid_postcode', __( 'Please enter your postcode', 'rcp' ), 'register' );
-	}
+// 	if( empty( $posted['rcp_address'] ) ) {
+// 		rcp_errors()->add( 'invalid_address', __( 'Please enter your address', 'rcp' ), 'register' );
+// 	}
+// 	if( empty( $posted['rcp_postcode'] ) ) {
+// 		rcp_errors()->add( 'invalid_postcode', __( 'Please enter your postcode', 'rcp' ), 'register' );
+// 	}
 
-}
-add_action( 'rcp_form_errors', 'pw_rcp_validate_user_fields_on_register', 10 );
+// }
+// add_action( 'rcp_form_errors', 'pw_rcp_validate_user_fields_on_register', 10 );
+
+
+
 
 /**
  * Stores the information submitted during registration
