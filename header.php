@@ -43,7 +43,7 @@
 
 			<div class="site-branding">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">
+					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo2.png2">
 				</a>
 			</div><!-- .site-branding -->
 
