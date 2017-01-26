@@ -1,7 +1,7 @@
 <?php
 
 function enqueue_styles_scripts() { 
-	wp_enqueue_style( 'foll-style', get_template_directory_uri() . '/build/screen.css', array(), '125' );
+	wp_enqueue_style( 'foll-style', get_template_directory_uri() . '/build/screen.css', array(), '126' );
 	
 	// wp_enqueue_script( 'foll-modenizr', get_template_directory_uri() . '/js/vendor/modernizr.custom.98000.js', array(), false);		
     
