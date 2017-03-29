@@ -43,7 +43,7 @@
 
 			<div class="site-branding">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo2.png2">
+					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo2.png">
 				</a>
 			</div><!-- .site-branding -->
 
@@ -56,9 +56,9 @@
 	</div>
 
 	<?php
-		if ( !is_page_template( 'page-home.php' ) ) {
+		//if ( !is_page_template( 'page-home.php' ) ) {
 			include "inc/inc-sub-menu-bar.php";
-		}
+		//}
 	 ?>
 
 
