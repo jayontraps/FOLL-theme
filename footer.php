@@ -18,17 +18,13 @@
 
    	</nav>
 
-   	<?php
-			if (is_page_template("page-home.php" )) {
-				include "inc/inc-donate-row.php";
-			}
-   	  ?>
+   	
 
 	<footer id="colophon" class="footer-container clear" role="contentinfo">
 		<div class="site-info foll-footer innerWrap">
-			<div class="col-1-3">&copy; Friends of Lavell’s Lake <?php echo date('Y'); ?>. All rights reserved.</div>
+			<div class="col-1-5">&copy; Lavell's Wetland Trust (Registered Charity No. 1176960) <?php echo date('Y'); ?>. All rights reserved.</div>
 			<div class="col-1-3"><?php get_sidebar( 'footer' ); ?></div>
-			<div class="col-1-3"><a href="<?php bloginfo('url'); ?>/contact-us">Contact us</a></div>
+			<div class="col-1-1"><a href="<?php bloginfo('url'); ?>/contact-us">Contact us</a></div>
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

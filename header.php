@@ -9,22 +9,21 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta name="robots" content="noindex">
+<?php // Allow Google to see home page but no others, until work out how to make it more flexible
+	?>
+<?php if ( !is_page_template( 'page-home.php' ) ) : ?>
+    <meta name="robots" content="noindex">
+<?php else : ?>
+    <meta name="google-site-verification" content="4W2WiJPBfiK9Mf6vYe1v1ji6q9n0D-te7htcVuRWSsE">
+<?php endif; ?>
+<?php //<meta name="robots" content="noindex">
+	?>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
-
-<style type="text/css">
-
-	ul#rcp_subscription_levels li:first-of-type {
-	    display: none;
-	}
-
-</style>
-
 
 </head>
 
@@ -43,7 +42,7 @@
 
 			<div class="site-branding">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo2.png">
+					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo3.png">
 				</a>
 			</div><!-- .site-branding -->
 

@@ -189,4 +189,9 @@ require get_template_directory() . '/inc/custom_functions.php';
 require get_template_directory() . '/inc/rcp-custom-user-fields.php';
 require get_template_directory() . '/inc/rcp-custom-user-fields-gift-aid.php';
 
+/**
+ * do not want upgrades to be prorated https://docs.restrictcontentpro.com/article/1559-upgrading-between-subscription-levels
+ */
+
+add_filter( 'rcp_disable_prorate_credit', '__return_true' );
 
