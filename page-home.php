@@ -12,11 +12,10 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-
 		<?php include "inc/inc-homepage-slider.php"; ?>
-
 		
-
+		<?php include "inc/youtube-feed.php"; ?>
+		
 		<?php if( have_rows('home_panels') ): ?>
 
 			<div class="innerWrap home-panels">
