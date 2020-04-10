@@ -143,6 +143,8 @@ add_action( 'widgets_init', 'foll_widgets_init' );
 function foll_scripts() {
 	wp_enqueue_style( 'foll-style-definition', get_stylesheet_uri() );
 
+	// wp_enqueue_script( 'facebook-sdk', 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=1773641676192356&autoLogAppEvents=1' );
+
 	// wp_enqueue_script( 'foll-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'foll-skip-link-focus-fix', get_template_directory_uri() . '/js/_js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -194,4 +196,17 @@ require get_template_directory() . '/inc/rcp-custom-user-fields-gift-aid.php';
  */
 
 add_filter( 'rcp_disable_prorate_credit', '__return_true' );
+
+/**
+ * Add attributes to Facebook script tag
+ */
+// add_filter( 'script_loader_tag', 'add_id_to_script', 10, 3 );
+ 
+// function add_id_to_script( $tag, $handle, $src ) {
+//     if ( 'facebook-sdk' === $handle ) {
+//         $tag = '<script type="text/javascript" src="' . esc_url( $src ) . '" async defer crossorigin="anonymous"></script>';
+//     }
+ 
+//     return $tag;
+// }
 

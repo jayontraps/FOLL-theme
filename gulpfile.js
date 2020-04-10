@@ -54,9 +54,9 @@ function css() {
     .pipe(sass({ outputStyle: "expanded" }))
     // .pipe(gulp.dest(dest + "css"))
     // .pipe(rename({ suffix: ".min" }))
-    // .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write())
-    // .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(dest))
     .pipe(browsersync.stream());
 }
@@ -81,7 +81,7 @@ function scriptsLint() {
 function scripts() {
   return (
     gulp
-      .src(['js/vendor/jquery.bxslider.js', 'js/vendor/bootstrap.min.js', 'js/functions.js', 'js/main-plugins-init.js', 'js/main.js'])
+      .src(['js/vendor/jquery.bxslider.js', 'js/vendor/bootstrap.min.js', 'js/functions.js', 'js/main-plugins-init.js', 'js/main.js', 'js/facebook.js'])
       .pipe(plumber())
       .pipe(concat('all.js'))
       .pipe(uglify())
