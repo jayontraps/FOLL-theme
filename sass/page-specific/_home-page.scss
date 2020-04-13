@@ -1,3 +1,11 @@
+.home {
+	background-color: $background_color_home;
+}
+
+.home-panels {
+	margin-top: 3rem;	
+}
+
 .homepage-content {
 	.innerWrap,
 	.home-row {
@@ -14,7 +22,7 @@
 	margin-right: auto;
 }
 
-.h-panel,
+
 .feed {
 	width: 100%;
 	position: relative;
@@ -22,9 +30,10 @@
 		width: 45%;		
 	}
 	@include breakpoint(tablet-landscape) {		
-		width: 30%;		
+		width: calc(33.333% - 40px);		
 	}
 }
+
 .feed-inner {
 	height: 400px;	
 	overflow-y: auto;
@@ -39,12 +48,9 @@
 	}
 }
 
-.home {
-	background-color: $background_color_home;
-}
-
-.home-panels {
-	margin-top: 3rem;	
+.h-panel {
+	width: calc(50% - 40px);
+	position: relative;
 }
 
 .h-panel {
@@ -174,7 +180,26 @@
 }
 
 
+.h-panel {
+	.news-item {
+		padding: 15px;
+		background-color: #fff;
+		border-radius: 5px;
+		border-bottom: none;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+		.article-title {
+			margin: 1rem 0;
+			a {
+				color: $body_color;
+			}
+		}
+	}
+}
 
+.h-panel__inner {
+	height: 450px;	
+	overflow-y: auto;
+}
 
 
 

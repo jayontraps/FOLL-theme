@@ -12,9 +12,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php include "inc/inc-homepage-slider.php"; ?>
-
-		<?php // include "inc/inc-news-list.php"; ?>
+		<?php include "inc/inc-homepage-slider.php"; ?>		
 
 		<div class="home-row">
 			<div class="feed">
@@ -25,33 +23,31 @@ get_header(); ?>
 			</div>
 			<div class="feed">
 				<?php include "inc/feed-youtube.php"; ?>
-			</div>
-			
+			</div>			
 		</div>
-							
-		
-		<?php if( have_rows('home_panels') ): ?>
 
-			<div class="home-row">
-
-			<?php while( have_rows('home_panels') ): the_row(); 
-				// vars
-				$image = get_sub_field('image');
-				$heading = get_sub_field('heading');
-				$copy = get_sub_field('copy');
-				$link = get_sub_field('panel_link');
+		<div class="home-row">
+			<?php 
+				$rows = get_field('home_panels');
+				$first = array_shift($rows);
+				// sub fields
+				$first_image = $first['image'];
+				$first_heading = $first['heading'];
+				$first_copy = $first['copy'];
+				$first_link = $first['panel_link'];
 			?>
 
 			<div class="h-panel">				
-				<h2><?php if( $link ): ?><a href="<?php echo $link; ?>"><?php endif; ?>	<?php echo $heading; ?><?php if( $link ): ?></a><?php endif; ?>	</h2>
-				<p><?php echo $copy; ?></p>
+				<h2><?php if( $first_link ): ?><a href="<?php echo $first_link; ?>"><?php endif; ?>	<?php echo $first_heading; ?><?php if( $first_link ): ?></a><?php endif; ?>	</h2>
 
-				<?php if( $link ): ?>
-					<a href="<?php echo $link; ?>">
+				<p><?php echo $first_copy; ?></p>
+
+				<?php if( $first_link ): ?>
+					<a href="<?php echo $first_link; ?>">
 				<?php endif; ?>
 					<div class="h-panel-img-wrap">
 
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+						<img src="<?php echo $first_image['url']; ?>" alt="<?php echo $first_image['alt'] ?>" />
 
 						<div class="h-panel-overlay">
 							<div class="centered">
@@ -59,12 +55,51 @@ get_header(); ?>
 							</div>	
 						</div>
 					</div>						
-				<?php if( $link ): ?>
+				<?php if( $first_link ): ?>
 					</a>
 				<?php endif; ?>									    
 			</div>
 
-			<?php endwhile; ?>
+			<div class="h-panel">							
+				<h2><a href="/">Latest News & Events</a></h2>						
+				<div class="h-panel__inner">
+					<?php include('inc/feed-events.php') ?>			    
+				</div>
+			</div>
+
+		</div>
+
+							
+		
+		<?php if( have_rows('home_panels') ): ?>
+
+			<div class="home-row">
+
+			<?php foreach( $rows as $row ) : ?>
+	
+			<div class="h-panel">				
+				<h2><?php if( $row['panel_link'] ): ?><a href="<?php echo $row['panel_link']; ?>"><?php endif; ?>	<?php echo $row['heading']; ?><?php if( $row['panel_link'] ): ?></a><?php endif; ?>	</h2>
+				<p><?php echo $row['copy']; ?></p>
+
+				<?php if( $row['panel_link'] ): ?>
+					<a href="<?php echo $row['panel_link']; ?>">
+				<?php endif; ?>
+					<div class="h-panel-img-wrap">
+
+						<img src="<?php echo $row['image']['url']; ?>" alt="<?php echo $row['image']['alt'] ?>" />
+
+						<div class="h-panel-overlay">
+							<div class="centered">
+								<h4>Explore</h4>
+							</div>	
+						</div>
+					</div>						
+				<?php if( $row['panel_link'] ): ?>
+					</a>
+				<?php endif; ?>									    
+			</div>
+
+			<?php endforeach; ?>
 
 			</div><!-- .home-panels -->
 
