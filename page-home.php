@@ -13,20 +13,15 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 		<?php include "inc/inc-homepage-slider.php"; ?>		
-
+		
 		<div class="home-row">
-			<div class="feed">
-				<?php include "inc/feed-twitter.php"; ?>
-			</div>			
-			<div class="feed">
-				<?php include "inc/feed-facebook.php"; ?>
+			<div class="h-panel">							
+				<h2><a href="/">Latest News</a></h2>						
+				<div class="h-panel__inner">
+					<?php include('inc/feed-events.php') ?>			    
+				</div>
 			</div>
-			<div class="feed">
-				<?php include "inc/feed-youtube.php"; ?>
-			</div>			
-		</div>
 
-		<div class="home-row">
 			<?php 
 				$rows = get_field('home_panels');
 				$first = array_shift($rows);
@@ -58,15 +53,19 @@ get_header(); ?>
 				<?php if( $first_link ): ?>
 					</a>
 				<?php endif; ?>									    
-			</div>
+			</div>			
+		</div>
 
-			<div class="h-panel">							
-				<h2><a href="/">Latest News</a></h2>						
-				<div class="h-panel__inner">
-					<?php include('inc/feed-events.php') ?>			    
-				</div>
+		<div class="home-row">						
+			<div class="feed">
+				<?php include "inc/feed-facebook.php"; ?>
 			</div>
-
+			<div class="feed">
+				<?php include "inc/feed-youtube.php"; ?>
+			</div>			
+			<div class="feed">
+				<?php include "inc/feed-twitter.php"; ?>
+			</div>
 		</div>
 
 							
