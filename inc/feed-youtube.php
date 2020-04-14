@@ -4,7 +4,7 @@
 
 <div class="feed-inner">
     <div id="youtube-feed"></div>
-    <a class="channel-link" href="https://www.youtube.com/channel/UCEElyVlyaSBYA51Z9U1YYAw">More from the Find of the Day channel</a>
+    <a class="channel-link" target="_blank" href="https://www.youtube.com/channel/UCEElyVlyaSBYA51Z9U1YYAw">More from the Find of the Day channel</a>
 </div>
 
 
