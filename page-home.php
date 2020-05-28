@@ -16,7 +16,7 @@ get_header(); ?>
 		
 		<div class="home-row">
 			<div class="h-panel">							
-				<h2><a href="/">Latest News</a></h2>						
+				<h2><a href="/news">Latest News</a></h2>						
 				<div class="h-panel__inner">
 					<?php include('inc/feed-events.php') ?>			    
 				</div>
